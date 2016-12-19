@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BF0C82580FB8F0CBBFA4AD3 /* libPods-TestTableManagerDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA8AACB46C02498BDFADEDC /* libPods-TestTableManagerDemoUITests.a */; };
 		693974221E077908009B6786 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974211E077908009B6786 /* main.m */; };
 		693974251E077908009B6786 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974241E077908009B6786 /* AppDelegate.m */; };
 		693974281E077908009B6786 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974271E077908009B6786 /* FirstViewController.m */; };
@@ -19,8 +20,8 @@
 		693974601E077BC9009B6786 /* aTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6939745E1E077BC9009B6786 /* aTableViewCell.m */; };
 		693974651E077C55009B6786 /* bTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974631E077C55009B6786 /* bTableViewCell.m */; };
 		693974661E077C55009B6786 /* bTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693974641E077C55009B6786 /* bTableViewCell.xib */; };
-		693974F71E07BB71009B6786 /* JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974F41E07BB71009B6786 /* JDragonTableManager.m */; };
-		693974F81E07BB71009B6786 /* UITableView+JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974F61E07BB71009B6786 /* UITableView+JDragonTableManager.m */; };
+		DEEE0078C6F09325AB9AB934 /* libPods-TestTableManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F33B2E5AF42851467D94B71A /* libPods-TestTableManagerDemo.a */; };
+		F3FA648DF998AA8FAB21DA0F /* libPods-TestTableManagerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC4C1D260582CD1FBBB9FA2 /* libPods-TestTableManagerDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0731D1B01CE8416037824753 /* Pods-TestTableManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemo/Pods-TestTableManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0EA8AACB46C02498BDFADEDC /* libPods-TestTableManagerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableManagerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC4C1D260582CD1FBBB9FA2 /* libPods-TestTableManagerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableManagerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		445D6C7D630EE2A1A7892878 /* Pods-TestTableManagerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemoTests/Pods-TestTableManagerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		458F0FCB31B0D6544576E487 /* Pods-TestTableManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemo/Pods-TestTableManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6939741D1E077908009B6786 /* TestTableManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTableManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		693974211E077908009B6786 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		693974231E077908009B6786 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,10 +70,10 @@
 		693974621E077C55009B6786 /* bTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bTableViewCell.h; sourceTree = "<group>"; };
 		693974631E077C55009B6786 /* bTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bTableViewCell.m; sourceTree = "<group>"; };
 		693974641E077C55009B6786 /* bTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bTableViewCell.xib; sourceTree = "<group>"; };
-		693974F31E07BB71009B6786 /* JDragonTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDragonTableManager.h; sourceTree = "<group>"; };
-		693974F41E07BB71009B6786 /* JDragonTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDragonTableManager.m; sourceTree = "<group>"; };
-		693974F51E07BB71009B6786 /* UITableView+JDragonTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JDragonTableManager.h"; sourceTree = "<group>"; };
-		693974F61E07BB71009B6786 /* UITableView+JDragonTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JDragonTableManager.m"; sourceTree = "<group>"; };
+		B8551C9C928EF2E70790963C /* Pods-TestTableManagerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemoUITests/Pods-TestTableManagerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C9EC538F20C7607A0B5FB019 /* Pods-TestTableManagerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemoTests/Pods-TestTableManagerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8C25DC15A33B2654E1D90FF /* Pods-TestTableManagerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemoUITests/Pods-TestTableManagerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F33B2E5AF42851467D94B71A /* libPods-TestTableManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEEE0078C6F09325AB9AB934 /* libPods-TestTableManagerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3FA648DF998AA8FAB21DA0F /* libPods-TestTableManagerDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +97,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF0C82580FB8F0CBBFA4AD3 /* libPods-TestTableManagerDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440E7D945608C3E274592557 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F33B2E5AF42851467D94B71A /* libPods-TestTableManagerDemo.a */,
+				2EC4C1D260582CD1FBBB9FA2 /* libPods-TestTableManagerDemoTests.a */,
+				0EA8AACB46C02498BDFADEDC /* libPods-TestTableManagerDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		693974141E077908009B6786 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +121,8 @@
 				6939743C1E077908009B6786 /* TestTableManagerDemoTests */,
 				693974471E077908009B6786 /* TestTableManagerDemoUITests */,
 				6939741E1E077908009B6786 /* Products */,
+				DA016FAAF93961A946F13BDE /* Pods */,
+				440E7D945608C3E274592557 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +139,6 @@
 		6939741F1E077908009B6786 /* TestTableManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				693974F21E07BB71009B6786 /* JDragonTableManager */,
 				693974231E077908009B6786 /* AppDelegate.h */,
 				693974241E077908009B6786 /* AppDelegate.m */,
 				693974261E077908009B6786 /* FirstViewController.h */,
@@ -165,15 +185,17 @@
 			path = TestTableManagerDemoUITests;
 			sourceTree = "<group>";
 		};
-		693974F21E07BB71009B6786 /* JDragonTableManager */ = {
+		DA016FAAF93961A946F13BDE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				693974F31E07BB71009B6786 /* JDragonTableManager.h */,
-				693974F41E07BB71009B6786 /* JDragonTableManager.m */,
-				693974F51E07BB71009B6786 /* UITableView+JDragonTableManager.h */,
-				693974F61E07BB71009B6786 /* UITableView+JDragonTableManager.m */,
+				0731D1B01CE8416037824753 /* Pods-TestTableManagerDemo.debug.xcconfig */,
+				458F0FCB31B0D6544576E487 /* Pods-TestTableManagerDemo.release.xcconfig */,
+				C9EC538F20C7607A0B5FB019 /* Pods-TestTableManagerDemoTests.debug.xcconfig */,
+				445D6C7D630EE2A1A7892878 /* Pods-TestTableManagerDemoTests.release.xcconfig */,
+				E8C25DC15A33B2654E1D90FF /* Pods-TestTableManagerDemoUITests.debug.xcconfig */,
+				B8551C9C928EF2E70790963C /* Pods-TestTableManagerDemoUITests.release.xcconfig */,
 			);
-			path = JDragonTableManager;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6939744D1E077908009B6786 /* Build configuration list for PBXNativeTarget "TestTableManagerDemo" */;
 			buildPhases = (
+				02C1D2E4AA4B15F8CF72944F /* [CP] Check Pods Manifest.lock */,
 				693974191E077908009B6786 /* Sources */,
 				6939741A1E077908009B6786 /* Frameworks */,
 				6939741B1E077908009B6786 /* Resources */,
+				F8008AC6F3BE4FE4D2704A0E /* [CP] Embed Pods Frameworks */,
+				35B81A3F441D183DBFE5E9BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 693974501E077908009B6786 /* Build configuration list for PBXNativeTarget "TestTableManagerDemoTests" */;
 			buildPhases = (
+				5EFFA63D45319F0D3530B891 /* [CP] Check Pods Manifest.lock */,
 				693974351E077908009B6786 /* Sources */,
 				693974361E077908009B6786 /* Frameworks */,
 				693974371E077908009B6786 /* Resources */,
+				A880F4C337D6A250058598AE /* [CP] Embed Pods Frameworks */,
+				76D3CBB2FDB2AB85A085D186 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 693974531E077908009B6786 /* Build configuration list for PBXNativeTarget "TestTableManagerDemoUITests" */;
 			buildPhases = (
+				D1D2E847ACAD41E614CE3AAF /* [CP] Check Pods Manifest.lock */,
 				693974401E077908009B6786 /* Sources */,
 				693974411E077908009B6786 /* Frameworks */,
 				693974421E077908009B6786 /* Resources */,
+				A2F8C12B2B983DC1EF396EB5 /* [CP] Embed Pods Frameworks */,
+				4D98859575EF0105240579F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,14 +339,150 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02C1D2E4AA4B15F8CF72944F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35B81A3F441D183DBFE5E9BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTableManagerDemo/Pods-TestTableManagerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D98859575EF0105240579F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTableManagerDemoUITests/Pods-TestTableManagerDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EFFA63D45319F0D3530B891 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76D3CBB2FDB2AB85A085D186 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTableManagerDemoTests/Pods-TestTableManagerDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F8C12B2B983DC1EF396EB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTableManagerDemoUITests/Pods-TestTableManagerDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A880F4C337D6A250058598AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTableManagerDemoTests/Pods-TestTableManagerDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D2E847ACAD41E614CE3AAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8008AC6F3BE4FE4D2704A0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTableManagerDemo/Pods-TestTableManagerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		693974191E077908009B6786 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693974F81E07BB71009B6786 /* UITableView+JDragonTableManager.m in Sources */,
 				693974651E077C55009B6786 /* bTableViewCell.m in Sources */,
-				693974F71E07BB71009B6786 /* JDragonTableManager.m in Sources */,
 				693974601E077BC9009B6786 /* aTableViewCell.m in Sources */,
 				6939742B1E077908009B6786 /* SecondViewController.m in Sources */,
 				693974251E077908009B6786 /* AppDelegate.m in Sources */,
@@ -467,6 +634,7 @@
 		};
 		6939744E1E077908009B6786 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0731D1B01CE8416037824753 /* Pods-TestTableManagerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NBCMCCDR2L;
@@ -480,6 +648,7 @@
 		};
 		6939744F1E077908009B6786 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 458F0FCB31B0D6544576E487 /* Pods-TestTableManagerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NBCMCCDR2L;
@@ -493,6 +662,7 @@
 		};
 		693974511E077908009B6786 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9EC538F20C7607A0B5FB019 /* Pods-TestTableManagerDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = NBCMCCDR2L;
@@ -506,6 +676,7 @@
 		};
 		693974521E077908009B6786 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 445D6C7D630EE2A1A7892878 /* Pods-TestTableManagerDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = NBCMCCDR2L;
@@ -519,6 +690,7 @@
 		};
 		693974541E077908009B6786 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C25DC15A33B2654E1D90FF /* Pods-TestTableManagerDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = NBCMCCDR2L;
 				INFOPLIST_FILE = TestTableManagerDemoUITests/Info.plist;
@@ -531,6 +703,7 @@
 		};
 		693974551E077908009B6786 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8551C9C928EF2E70790963C /* Pods-TestTableManagerDemoUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = NBCMCCDR2L;
 				INFOPLIST_FILE = TestTableManagerDemoUITests/Info.plist;
