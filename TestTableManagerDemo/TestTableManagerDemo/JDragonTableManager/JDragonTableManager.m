@@ -159,33 +159,22 @@
     UITableViewCell *cell;
     NSObject *data;
     //    NSTimeInterval startLoadTime = [[NSDate date] timeIntervalSince1970];
-    
+    if (_reuseIdentArr!=nil) {
+        cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentArr[indexPath.section] forIndexPath:indexPath];
+    }else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
+    }
     switch (self.tabHelpType) {
         case NumberOfRowsInSectionNum:
-            if (_reuseIdentArr!=nil) {
-                cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentArr[indexPath.section] forIndexPath:indexPath];
-            }else
-            {
-                cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
-            }
-            data = self.data[indexPath.section][indexPath.row];
+            data = self.isSection?self.data[indexPath.section][indexPath.row]:self.data[indexPath.row];
             break;
         case NumberOfRowsInSectionCount:
-            cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
             data = self.data[indexPath.row];
             break;
         case NumberOfRowsInSectionOne:
-            if (_reuseIdentArr!=nil) {
-                cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentArr[indexPath.section] forIndexPath:indexPath];
-            }else
-            {
-                cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
-            }
-            if(_isSection){
-                data = self.data[indexPath.section];
-            }else{
-                data = self.data[indexPath.row];
-            }
+            data = self.isSection?self.data[indexPath.section]:self.data[indexPath.row];
+
             break;
         default:
             break;

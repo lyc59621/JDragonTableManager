@@ -1,18 +1,18 @@
 //
-//  TestTableManagerTests.m
-//  TestTableManagerTests
+//  TestTableManagerDemoTests.m
+//  TestTableManagerDemoTests
 //
-//  Created by JDragon on 2016/12/15.
+//  Created by JDragon on 2016/12/19.
 //  Copyright © 2016年 JDragon. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface TestTableManagerTests : XCTestCase
+@interface TestTableManagerDemoTests : XCTestCase
 
 @end
 
-@implementation TestTableManagerTests
+@implementation TestTableManagerDemoTests
 
 - (void)setUp {
     [super setUp];

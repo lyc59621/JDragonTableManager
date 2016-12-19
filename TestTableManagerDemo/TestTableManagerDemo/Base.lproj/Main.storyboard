@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--分区-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="109" y="313" width="157.5" height="41.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                                <rect key="frame" x="90.5" y="362.5" width="194.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tvd-KT-nar">
+                                <rect key="frame" x="0.0" y="78" width="375" height="540"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RjT-3Q-Ga4">
+                                <rect key="frame" x="127" y="14" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ExR-X0-MFf"/>
+                                    <constraint firstAttribute="width" constant="121" id="bfu-sU-XR2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="单cell"/>
+                                    <segment title="多cell"/>
+                                </segments>
+                                <connections>
+                                    <action selector="cellSegmentAction:" destination="9pv-A4-QxB" eventType="valueChanged" id="oyQ-Sz-XXf"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9vo-UB-7Ld">
+                                <rect key="frame" x="36" y="50" width="303" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="4UG-OG-1BH"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="第一种"/>
+                                    <segment title="第二种"/>
+                                    <segment title="第三种"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="9pv-A4-QxB" eventType="valueChanged" id="ndG-dH-DMD"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9vo-UB-7Ld" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="36" id="0cb-gv-cdg"/>
+                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstAttribute="trailing" secondItem="Tvd-KT-nar" secondAttribute="trailing" id="DTo-nh-c2X"/>
+                            <constraint firstItem="Tvd-KT-nar" firstAttribute="top" secondItem="9vo-UB-7Ld" secondAttribute="bottom" id="GTY-ss-944"/>
+                            <constraint firstAttribute="trailing" secondItem="9vo-UB-7Ld" secondAttribute="trailing" constant="36" id="No2-A2-THJ"/>
+                            <constraint firstItem="RjT-3Q-Ga4" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Re9-QC-FHL"/>
+                            <constraint firstItem="9vo-UB-7Ld" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="30" id="c64-6p-MRp"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
+                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="9vo-UB-7Ld" firstAttribute="top" secondItem="RjT-3Q-Ga4" secondAttribute="bottom" constant="8" id="iSY-kl-xwz"/>
+                            <constraint firstItem="Tvd-KT-nar" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="mXT-2z-SSN"/>
+                            <constraint firstItem="RjT-3Q-Ga4" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="14" id="pAL-l1-Cha"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Tvd-KT-nar" secondAttribute="bottom" id="zFM-jM-kQt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="分区" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="aTableView" destination="Tvd-KT-nar" id="igE-jp-bXV"/>
+                        <outlet property="cellSegMent" destination="RjT-3Q-Ga4" id="zN0-b2-1ur"/>
+                        <outlet property="typeSegment" destination="9vo-UB-7Ld" id="hNI-KM-6AA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="5"/>
+        </scene>
+        <!--不分区-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rVY-QT-yz5">
+                                <rect key="frame" x="36" y="50" width="303" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ckW-EI-h4Z"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="第一种"/>
+                                    <segment title="第二种"/>
+                                    <segment title="第三种"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Jgu-iq-EOF"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="irg-Oa-AbH">
+                                <rect key="frame" x="0.0" y="78" width="375" height="540"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-HU-4fl">
+                                <rect key="frame" x="127" y="14" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="Qwo-Sa-HEB"/>
+                                    <constraint firstAttribute="height" constant="28" id="u2q-2A-g0v"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="单cell"/>
+                                    <segment title="多cell"/>
+                                </segments>
+                                <connections>
+                                    <action selector="cellSegmentAction:" destination="8rJ-Kc-sve" eventType="valueChanged" id="13e-A2-OOn"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="irg-Oa-AbH" secondAttribute="bottom" id="5wW-pI-h1e"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="f9J-HU-4fl" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="14" id="Pin-wI-z4g"/>
+                            <constraint firstAttribute="trailing" secondItem="irg-Oa-AbH" secondAttribute="trailing" id="SWF-QW-YhN"/>
+                            <constraint firstItem="irg-Oa-AbH" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="U1Z-TQ-Nez"/>
+                            <constraint firstAttribute="trailing" secondItem="rVY-QT-yz5" secondAttribute="trailing" constant="36" id="g5w-Yt-9xa"/>
+                            <constraint firstItem="rVY-QT-yz5" firstAttribute="top" secondItem="f9J-HU-4fl" secondAttribute="bottom" constant="8" id="gvH-Iz-1M1"/>
+                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
+                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="f9J-HU-4fl" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="sbC-Ap-7kG"/>
+                            <constraint firstItem="rVY-QT-yz5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="36" id="wXU-Af-wCt"/>
+                            <constraint firstItem="irg-Oa-AbH" firstAttribute="top" secondItem="rVY-QT-yz5" secondAttribute="bottom" id="zf7-jZ-gxk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="不分区" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="aTableView" destination="irg-Oa-AbH" id="Xdw-HI-nko"/>
+                        <outlet property="cellSegMent" destination="f9J-HU-4fl" id="WlO-jv-0dV"/>
+                        <outlet property="typeSegment" destination="rVY-QT-yz5" id="WZD-z7-BoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="684"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
