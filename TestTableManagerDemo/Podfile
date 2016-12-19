@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '7.0'
+
+target 'TestTableManagerDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for TestTableManagerDemo
+
+#pod 'JDragonTableManager', :path => '../JDragonTableManager' #指定路径
+pod 'JDragonTableManager', :path => '../JDragonTableManager.podspec'  #指定podspec文件
+
+  target 'TestTableManagerDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TestTableManagerDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
