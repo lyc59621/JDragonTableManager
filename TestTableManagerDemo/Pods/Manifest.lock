@@ -1,0 +1,16 @@
+PODS:
+  - JDragonTableManager (0.0.1)
+
+DEPENDENCIES:
+  - JDragonTableManager (from `../JDragonTableManager.podspec`)
+
+EXTERNAL SOURCES:
+  JDragonTableManager:
+    :path: "../JDragonTableManager.podspec"
+
+SPEC CHECKSUMS:
+  JDragonTableManager: 731b4db026e99f728ce9387ac81aa64224251063
+
+PODFILE CHECKSUM: 36b84a541166d3372f523ec703b04f5462735f6e
+
+COCOAPODS: 1.1.1
