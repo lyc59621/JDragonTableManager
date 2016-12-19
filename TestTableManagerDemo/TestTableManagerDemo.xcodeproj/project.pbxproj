@@ -16,11 +16,11 @@
 		693974331E077908009B6786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693974311E077908009B6786 /* LaunchScreen.storyboard */; };
 		6939743E1E077908009B6786 /* TestTableManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6939743D1E077908009B6786 /* TestTableManagerDemoTests.m */; };
 		693974491E077908009B6786 /* TestTableManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974481E077908009B6786 /* TestTableManagerDemoUITests.m */; };
-		6939745B1E077949009B6786 /* JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974581E077949009B6786 /* JDragonTableManager.m */; };
-		6939745C1E077949009B6786 /* UITableView+JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6939745A1E077949009B6786 /* UITableView+JDragonTableManager.m */; };
 		693974601E077BC9009B6786 /* aTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6939745E1E077BC9009B6786 /* aTableViewCell.m */; };
 		693974651E077C55009B6786 /* bTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974631E077C55009B6786 /* bTableViewCell.m */; };
 		693974661E077C55009B6786 /* bTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693974641E077C55009B6786 /* bTableViewCell.xib */; };
+		693974F01E0791F4009B6786 /* JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974ED1E0791F4009B6786 /* JDragonTableManager.m */; };
+		693974F11E0791F4009B6786 /* UITableView+JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974EF1E0791F4009B6786 /* UITableView+JDragonTableManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,15 +59,15 @@
 		693974441E077908009B6786 /* TestTableManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTableManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		693974481E077908009B6786 /* TestTableManagerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableManagerDemoUITests.m; sourceTree = "<group>"; };
 		6939744A1E077908009B6786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		693974571E077949009B6786 /* JDragonTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDragonTableManager.h; sourceTree = "<group>"; };
-		693974581E077949009B6786 /* JDragonTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDragonTableManager.m; sourceTree = "<group>"; };
-		693974591E077949009B6786 /* UITableView+JDragonTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JDragonTableManager.h"; sourceTree = "<group>"; };
-		6939745A1E077949009B6786 /* UITableView+JDragonTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JDragonTableManager.m"; sourceTree = "<group>"; };
 		6939745D1E077BC9009B6786 /* aTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aTableViewCell.h; sourceTree = "<group>"; };
 		6939745E1E077BC9009B6786 /* aTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aTableViewCell.m; sourceTree = "<group>"; };
 		693974621E077C55009B6786 /* bTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bTableViewCell.h; sourceTree = "<group>"; };
 		693974631E077C55009B6786 /* bTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bTableViewCell.m; sourceTree = "<group>"; };
 		693974641E077C55009B6786 /* bTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bTableViewCell.xib; sourceTree = "<group>"; };
+		693974EC1E0791F4009B6786 /* JDragonTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDragonTableManager.h; sourceTree = "<group>"; };
+		693974ED1E0791F4009B6786 /* JDragonTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDragonTableManager.m; sourceTree = "<group>"; };
+		693974EE1E0791F4009B6786 /* UITableView+JDragonTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JDragonTableManager.h"; sourceTree = "<group>"; };
+		693974EF1E0791F4009B6786 /* UITableView+JDragonTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JDragonTableManager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 		6939741F1E077908009B6786 /* TestTableManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				693974561E077949009B6786 /* JDragonTableManager */,
+				693974EB1E0791F4009B6786 /* JDragonTableManager */,
 				693974231E077908009B6786 /* AppDelegate.h */,
 				693974241E077908009B6786 /* AppDelegate.m */,
 				693974261E077908009B6786 /* FirstViewController.h */,
@@ -165,13 +165,13 @@
 			path = TestTableManagerDemoUITests;
 			sourceTree = "<group>";
 		};
-		693974561E077949009B6786 /* JDragonTableManager */ = {
+		693974EB1E0791F4009B6786 /* JDragonTableManager */ = {
 			isa = PBXGroup;
 			children = (
-				693974571E077949009B6786 /* JDragonTableManager.h */,
-				693974581E077949009B6786 /* JDragonTableManager.m */,
-				693974591E077949009B6786 /* UITableView+JDragonTableManager.h */,
-				6939745A1E077949009B6786 /* UITableView+JDragonTableManager.m */,
+				693974EC1E0791F4009B6786 /* JDragonTableManager.h */,
+				693974ED1E0791F4009B6786 /* JDragonTableManager.m */,
+				693974EE1E0791F4009B6786 /* UITableView+JDragonTableManager.h */,
+				693974EF1E0791F4009B6786 /* UITableView+JDragonTableManager.m */,
 			);
 			path = JDragonTableManager;
 			sourceTree = "<group>";
@@ -313,13 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693974F11E0791F4009B6786 /* UITableView+JDragonTableManager.m in Sources */,
 				693974651E077C55009B6786 /* bTableViewCell.m in Sources */,
-				6939745C1E077949009B6786 /* UITableView+JDragonTableManager.m in Sources */,
+				693974F01E0791F4009B6786 /* JDragonTableManager.m in Sources */,
 				693974601E077BC9009B6786 /* aTableViewCell.m in Sources */,
 				6939742B1E077908009B6786 /* SecondViewController.m in Sources */,
 				693974251E077908009B6786 /* AppDelegate.m in Sources */,
 				693974281E077908009B6786 /* FirstViewController.m in Sources */,
-				6939745B1E077949009B6786 /* JDragonTableManager.m in Sources */,
 				693974221E077908009B6786 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +560,7 @@
 				6939744F1E077908009B6786 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		693974501E077908009B6786 /* Build configuration list for PBXNativeTarget "TestTableManagerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +569,7 @@
 				693974521E077908009B6786 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		693974531E077908009B6786 /* Build configuration list for PBXNativeTarget "TestTableManagerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +578,7 @@
 				693974551E077908009B6786 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
