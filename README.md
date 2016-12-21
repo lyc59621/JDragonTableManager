@@ -2,7 +2,8 @@
 
 iOS  UITableView的DataSource和delegate  优化封装
 
-badge-pod badge-languages badge-platforms badge-mit
+![badge-pod] ![badge-languages] ![badge-platforms] ![badge-mit]
+
 
 
 ### user pod
