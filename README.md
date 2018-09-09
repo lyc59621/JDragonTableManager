@@ -10,7 +10,7 @@ iOS  UITableView的DataSource和delegate  优化封装
 
 ```
 
-pod 'JDragonTableManager','~> 0.0.2'
+pod 'JDragonTableManager','~> 0.0.3'
 
 
 ```
