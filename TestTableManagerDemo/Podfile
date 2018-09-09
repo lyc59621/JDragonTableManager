@@ -9,7 +9,7 @@ target 'TestTableManagerDemo' do
 
 #pod 'JDragonTableManager', :path => '..' #指定路径
 pod 'JDragonTableManager', :path => '../JDragonTableManager.podspec'  #指定podspec文件
-
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
   target 'TestTableManagerDemoTests' do
     inherit! :search_paths
     # Pods for testing

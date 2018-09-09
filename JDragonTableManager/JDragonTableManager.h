@@ -65,9 +65,20 @@ typedef enum JDTabHelpType:NSUInteger
                  isSection:(BOOL)isSection
      andReuseIdentifierArr:(NSArray *)reuseIdentifierArr;
 
+// 合并delegate和
+-(void)setCellAutoHeightAndeHeaderHeight:(CGFloat)hHeight
+                            footerHeight:(CGFloat)fHeight
+                             selectBlock:(JDTabSelectCellBlock)selectBlock;
+
+-(void)setReuseArrayInSectionTypeWithArray:(NSArray*)array;
+
+
+
 //ReloadData
 -(void)updateReloadData:(NSArray*)datas;
 
 
+-(void)updateData:(NSArray*)datas;
 
 @end
+

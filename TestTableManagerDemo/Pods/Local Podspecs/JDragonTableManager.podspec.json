@@ -1,6 +1,6 @@
 {
   "name": "JDragonTableManager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "iOS UITableView 封装",
   "description": "iOS UITableView的DataSource和delegate 优化封装",
   "homepage": "https://github.com/lyc59621/JDragonTableManager",
@@ -13,8 +13,13 @@
   },
   "source": {
     "git": "https://github.com/lyc59621/JDragonTableManager.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": "JDragonTableManager/*.{h,m}",
-  "requires_arc": true
+  "requires_arc": true,
+  "dependencies": {
+    "UITableView+FDTemplateLayoutCell": [
+      "~> 1.6"
+    ]
+  }
 }

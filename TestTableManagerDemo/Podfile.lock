@@ -1,16 +1,24 @@
 PODS:
-  - JDragonTableManager (0.0.1)
+  - JDragonTableManager (0.0.2):
+    - "UITableView+FDTemplateLayoutCell (~> 1.6)"
+  - "UITableView+FDTemplateLayoutCell (1.6)"
 
 DEPENDENCIES:
   - JDragonTableManager (from `../JDragonTableManager.podspec`)
+  - "UITableView+FDTemplateLayoutCell (~> 1.6)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - "UITableView+FDTemplateLayoutCell"
 
 EXTERNAL SOURCES:
   JDragonTableManager:
     :path: "../JDragonTableManager.podspec"
 
 SPEC CHECKSUMS:
-  JDragonTableManager: 731b4db026e99f728ce9387ac81aa64224251063
+  JDragonTableManager: a7b413b1c4835af7255a6b369ef8c5d06e314357
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: 36b84a541166d3372f523ec703b04f5462735f6e
+PODFILE CHECKSUM: dcbd4ab187ce5f64a20f9ecba65a9943048aeb4d
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3

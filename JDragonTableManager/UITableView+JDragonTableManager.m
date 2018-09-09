@@ -1,3 +1,4 @@
+
 //
 //  UITableView+JDragonTableManager.m
 //  TestTableManager
@@ -11,19 +12,19 @@
 @implementation UITableView (JDragonTableManager)
 
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
-           withTabType:(JDTabHelpType)tabType
-                withVC:(UIViewController*)VC
-             isSection:(BOOL)isSection
-       reuseIdentifier:(NSString *)reuseIdentifier
+                     withTabType:(JDTabHelpType)tabType
+                          withVC:(UIViewController*)VC
+                       isSection:(BOOL)isSection
+                 reuseIdentifier:(NSString *)reuseIdentifier
 {
     return [JDragonTableManager
             dataSource:source tabType:tabType tableView:self TabVC:VC isSection:isSection andReuseIdentifier:reuseIdentifier];
 }
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
-           withTabType:(JDTabHelpType)tabType
-                withVC:(UIViewController*)VC
-             isSection:(BOOL)isSection
-    reuseIdentifierArr:(NSArray *)reuseIdentifierArr
+                     withTabType:(JDTabHelpType)tabType
+                          withVC:(UIViewController*)VC
+                       isSection:(BOOL)isSection
+              reuseIdentifierArr:(NSArray *)reuseIdentifierArr
 {
     return [JDragonTableManager dataSource:source tabType:tabType tableView:self TabVC:VC isSection:isSection andReuseIdentifierArr:reuseIdentifierArr];
 }

@@ -37,20 +37,20 @@
  *  @return TableViewDataSource
  */
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
-           withTabType:(JDTabHelpType)tabType
-                withVC:(UIViewController*)VC
-             isSection:(BOOL)isSection
-       reuseIdentifier:(NSString *)reuseIdentifier;
+                     withTabType:(JDTabHelpType)tabType
+                          withVC:(UIViewController*)VC
+                       isSection:(BOOL)isSection
+                 reuseIdentifier:(NSString *)reuseIdentifier;
 /**
  *  根据TabType获取DataSource(带数据源---多个Cell)
  *
  *  @return TableViewDataSource
  */
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
-           withTabType:(JDTabHelpType)tabType
-                withVC:(UIViewController*)VC
-             isSection:(BOOL)isSection
-    reuseIdentifierArr:(NSArray *)reuseIdentifierArr;
+                     withTabType:(JDTabHelpType)tabType
+                          withVC:(UIViewController*)VC
+                       isSection:(BOOL)isSection
+              reuseIdentifierArr:(NSArray *)reuseIdentifierArr;
 
 
 #pragma mark----------------------------TableDelegate--------------------------------
@@ -60,6 +60,11 @@
  *  @return TableViewDelagate
  */
 - (id)JDTab_DelegateWithHeaderHeight:(CGFloat)hHeight
-                               footerHeight:(CGFloat)fHeight
-                                selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock;
+                        footerHeight:(CGFloat)fHeight
+                         selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock;
+
+//- (id)JDTab_DelegateWithAutoHeight HeaderHeight:(CGFloat)hHeight
+//                                   footerHeight:(CGFloat)fHeight
+//                                    selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock;
 @end
+

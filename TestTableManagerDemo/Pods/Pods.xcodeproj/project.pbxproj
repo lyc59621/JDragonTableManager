@@ -7,120 +7,226 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00F6B43E1798BADDFE014DB71CA897EC /* Pods-TestTableManagerDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C868061C8A163EFCB691FB46054D1 /* Pods-TestTableManagerDemoUITests-dummy.m */; };
-		1675630220A7B4F5EDD22D5B4110DBBB /* JDragonTableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EEDEEB7920DA2473BF7D31066F321C7 /* JDragonTableManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32AF1BC0B036ECCB6FCF80308464EEAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		4A808496C2DE74476260C408791B8BAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		82BB2C958B403BD35CE2B5D8D4E369EF /* Pods-TestTableManagerDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41415382626501B39C7875D4EAD61326 /* Pods-TestTableManagerDemoTests-dummy.m */; };
-		A09604296B79E2A3CA8AD30A5C484D68 /* JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED592F1FD0AF949C6FCA01AC15F276C /* JDragonTableManager.m */; };
-		B9F28154DD80F947112CB78BC6ACFC70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		C0D2F01A08888E24B35F4E75921049E9 /* JDragonTableManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 551DBF041943B9EE7B4AC675EF326B9E /* JDragonTableManager-dummy.m */; };
-		C61F5C59E649EA30C6570106FBBC9330 /* UITableView+JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9605BB303673A8A8A8674CC907B7403 /* UITableView+JDragonTableManager.m */; };
-		D8A28E588BCE521E1B7E563666E7AD6F /* UITableView+JDragonTableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 244044C4AF1E33970E6FCF408CE057C1 /* UITableView+JDragonTableManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA5022120409225C78E8E60CE39CB317 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		EE6193898AFFFA3A4E0AE3B3D55A565C /* Pods-TestTableManagerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0806F551196B4E917D68D3EF7CEF035 /* Pods-TestTableManagerDemo-dummy.m */; };
+		027526785FB5877B45641078AF55D656 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D41F887F6A1003258DE15B8ED12FFFE /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		14A9BCC1A9F84F54171475D430E992DD /* UITableView+FDIndexPathHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F0AEAEC04C91878522FD4C360592ED /* UITableView+FDIndexPathHeightCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34D0764EC68BE6545A3EF34A70861592 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D21B6DF1E0057E464E5F209A9663B /* UITableView+FDTemplateLayoutCell.m */; };
+		41D831FA7ABCDE66E1D5C99D82B78501 /* UITableView+JDragonTableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CBBF5166799DDFCD0345E59A5616DB /* UITableView+JDragonTableManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5828D445B0972FD22AD874C7EE64B2E4 /* Pods-TestTableManagerDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C868061C8A163EFCB691FB46054D1 /* Pods-TestTableManagerDemoUITests-dummy.m */; };
+		5B92516DA0BD7266262BA207EB33069E /* Pods-TestTableManagerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0806F551196B4E917D68D3EF7CEF035 /* Pods-TestTableManagerDemo-dummy.m */; };
+		5E5EEDAFB049BE3F99B4691FC084DA43 /* UITableView+FDTemplateLayoutCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46602CA47FB3BE58BAB06537FAF2C801 /* UITableView+FDTemplateLayoutCell-dummy.m */; };
+		6EB8CEFB16405C59F1D4689A95FCA9C3 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B778352D1AE42B12B6ED52146DC158EB /* UITableView+FDIndexPathHeightCache.m */; };
+		8E513AC844D80BFD871142AEC751EFFD /* Pods-TestTableManagerDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41415382626501B39C7875D4EAD61326 /* Pods-TestTableManagerDemoTests-dummy.m */; };
+		90AE1631CE90371745DE57A156832062 /* JDragonTableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F280510F0F5A15E71DFA1AF1BB78CC56 /* JDragonTableManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C3B44181C8DC379D0108160CEA825309 /* JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A76172BD57FCEF4F1412D86324F5B9 /* JDragonTableManager.m */; };
+		CBE1109DFD2EBF5C1EA5BD0C5CD68053 /* UITableView+JDragonTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F295C2C351F69B05BF3CD1B875F9750 /* UITableView+JDragonTableManager.m */; };
+		CFC11CBD03E01D26769AA8E0E2BF8E3D /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E58AF82BAC51E30C2DD73BC5443498E7 /* UITableView+FDKeyedHeightCache.m */; };
+		D139BE58A8E7CD42A7FDDAF74C8A66D6 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = FBED6D4BFDDB558BCED53679ED20DA69 /* UITableView+FDTemplateLayoutCellDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D5D8CB6DE3DA7F361BEAD8D0180F9D22 /* UITableView+FDTemplateLayoutCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 25DED341B760D28F414F03E6E64BDC48 /* UITableView+FDTemplateLayoutCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E16C3DBAC723D02C1F2DE172869036BE /* UITableView+FDKeyedHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB4672D76D2FE89F21A8A3378710684 /* UITableView+FDKeyedHeightCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E7E31D7827F570F9C00C75689BAF89A3 /* JDragonTableManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A4D7E9A1E28DA8FD2928801B637E45 /* JDragonTableManager-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F526486F6CC3883D7E644DF995E2BB96 /* PBXContainerItemProxy */ = {
+		C0BD41568EF8160F713DA4507A5F91AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C1752C9403229223EF191429AD01149;
+			remoteGlobalIDString = A25212D97DA9C0E701920273C9D504BD;
+			remoteInfo = "Pods-TestTableManagerDemo";
+		};
+		C6E6C42D9E802EBAF9000AC481847A21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A25212D97DA9C0E701920273C9D504BD;
+			remoteInfo = "Pods-TestTableManagerDemo";
+		};
+		DAA3DB406A1B74E852AE5E5FCB1295C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0260E57F10BD87C20B12FBD2E27627A8;
+			remoteInfo = "UITableView+FDTemplateLayoutCell";
+		};
+		F17A8CCCB041D13A8D57515AEB8EEDC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0260E57F10BD87C20B12FBD2E27627A8;
+			remoteInfo = "UITableView+FDTemplateLayoutCell";
+		};
+		F378087F604468D490BD11614D18BB0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E492FE209EC7E59CACD33FF7A8F07432;
 			remoteInfo = JDragonTableManager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		109C13293ABF0AC82A13D2ED01E312A3 /* JDragonTableManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JDragonTableManager-prefix.pch"; sourceTree = "<group>"; };
+		117B8AA10EE0909223E21F6A15B1DAA6 /* UITableView+FDTemplateLayoutCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell-prefix.pch"; sourceTree = "<group>"; };
 		1D09E8658CC10DDF2896997BC03CD366 /* Pods-TestTableManagerDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestTableManagerDemo-resources.sh"; sourceTree = "<group>"; };
-		244044C4AF1E33970E6FCF408CE057C1 /* UITableView+JDragonTableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+JDragonTableManager.h"; sourceTree = "<group>"; };
+		1E8FF76C5B431E3E40CD3A7783C1D120 /* UITableView+FDTemplateLayoutCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITableView+FDTemplateLayoutCell.xcconfig"; sourceTree = "<group>"; };
 		25514654547E75A1BDA0636A245EB0D5 /* Pods-TestTableManagerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestTableManagerDemo-frameworks.sh"; sourceTree = "<group>"; };
-		2EEDEEB7920DA2473BF7D31066F321C7 /* JDragonTableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JDragonTableManager.h; sourceTree = "<group>"; };
+		25DED341B760D28F414F03E6E64BDC48 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "Classes/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		3D41F887F6A1003258DE15B8ED12FFFE /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCellDebug.m"; path = "Classes/UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		41415382626501B39C7875D4EAD61326 /* Pods-TestTableManagerDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestTableManagerDemoTests-dummy.m"; sourceTree = "<group>"; };
 		41D58F19C821BB7E57AE3114D4CF349B /* Pods-TestTableManagerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestTableManagerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		43A4D7E9A1E28DA8FD2928801B637E45 /* JDragonTableManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JDragonTableManager-dummy.m"; sourceTree = "<group>"; };
+		46602CA47FB3BE58BAB06537FAF2C801 /* UITableView+FDTemplateLayoutCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell-dummy.m"; sourceTree = "<group>"; };
 		512123EA92233022BE68C3BBD5FDE6B8 /* Pods-TestTableManagerDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestTableManagerDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		551DBF041943B9EE7B4AC675EF326B9E /* JDragonTableManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JDragonTableManager-dummy.m"; sourceTree = "<group>"; };
-		5ED592F1FD0AF949C6FCA01AC15F276C /* JDragonTableManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JDragonTableManager.m; sourceTree = "<group>"; };
+		575A2A79301B5F7B2EFB990B69D7CA52 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5F295C2C351F69B05BF3CD1B875F9750 /* UITableView+JDragonTableManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+JDragonTableManager.m"; path = "JDragonTableManager/UITableView+JDragonTableManager.m"; sourceTree = "<group>"; };
+		673FB5F594169FA44ACE80931D819174 /* libPods-TestTableManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestTableManagerDemo.a"; path = "libPods-TestTableManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDAE7BC81C6E87B1F6AC9D7092C9FFD /* JDragonTableManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JDragonTableManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		76CBBF5166799DDFCD0345E59A5616DB /* UITableView+JDragonTableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+JDragonTableManager.h"; path = "JDragonTableManager/UITableView+JDragonTableManager.h"; sourceTree = "<group>"; };
 		7A021D0441E72D21B67DE24B4A3C9FB4 /* Pods-TestTableManagerDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestTableManagerDemoUITests-resources.sh"; sourceTree = "<group>"; };
-		7CEE6EE275CAB2A789A6111C19F162C6 /* libPods-TestTableManagerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestTableManagerDemoTests.a"; path = "libPods-TestTableManagerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A6E01A92A35016E0DFFC3DB18E1309 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D2AE371BC61CBBC956523D4B8ABEEA7 /* libPods-TestTableManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestTableManagerDemo.a"; path = "libPods-TestTableManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9696028A33B78DF12C3F4D03FEC2EF38 /* JDragonTableManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JDragonTableManager.xcconfig; sourceTree = "<group>"; };
+		9D1D152386F33F7C3BBB337CCBBEFB95 /* libPods-TestTableManagerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestTableManagerDemoTests.a"; path = "libPods-TestTableManagerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB1D34A224082991000F41EB54CBD0 /* Pods-TestTableManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestTableManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		AD20314ACD0880E185A7521EC2A84938 /* libPods-TestTableManagerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestTableManagerDemoUITests.a"; path = "libPods-TestTableManagerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9810316262F8882813BB2338089EEB /* Pods-TestTableManagerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestTableManagerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B29941F68631F2B9594358C4DFCDB2F6 /* Pods-TestTableManagerDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestTableManagerDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
-		BF0E67747CFE5749C16E3AD2DB8A62AA /* JDragonTableManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JDragonTableManager.xcconfig; sourceTree = "<group>"; };
-		C011072E3F2D13261BE70CEB0AAF4F1B /* JDragonTableManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JDragonTableManager-prefix.pch"; sourceTree = "<group>"; };
+		B778352D1AE42B12B6ED52146DC158EB /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDIndexPathHeightCache.m"; path = "Classes/UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		C0217A0506F03FE9EF625C01D28AD1B1 /* libJDragonTableManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJDragonTableManager.a; path = libJDragonTableManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18BFCC1BA2225B3DCB376A6C123AF73 /* Pods-TestTableManagerDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestTableManagerDemoTests-resources.sh"; sourceTree = "<group>"; };
 		C2366591CCAD10AB822C2E6463B270E0 /* Pods-TestTableManagerDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestTableManagerDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C9605BB303673A8A8A8674CC907B7403 /* UITableView+JDragonTableManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JDragonTableManager.m"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C7A76172BD57FCEF4F1412D86324F5B9 /* JDragonTableManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JDragonTableManager.m; path = JDragonTableManager/JDragonTableManager.m; sourceTree = "<group>"; };
+		CFA218121B84AC0BE9FA8BAAAFEE8756 /* libUITableView+FDTemplateLayoutCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUITableView+FDTemplateLayoutCell.a"; path = "libUITableView+FDTemplateLayoutCell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1F0AEAEC04C91878522FD4C360592ED /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDIndexPathHeightCache.h"; path = "Classes/UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
 		D2CCDA57EBA26B24612482706A8B71DC /* Pods-TestTableManagerDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestTableManagerDemoTests-frameworks.sh"; sourceTree = "<group>"; };
 		D5F95BCFBECEDEECC95F0638DB2709E2 /* Pods-TestTableManagerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestTableManagerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D9AA9E12D58C1FC48D4929E85F8E24E4 /* Pods-TestTableManagerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestTableManagerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		E19F4792C8AE4601B8BC798A199ACC0F /* Pods-TestTableManagerDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestTableManagerDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E1F66A6ACDFE9244F23DA785ED747360 /* Pods-TestTableManagerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestTableManagerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E58AF82BAC51E30C2DD73BC5443498E7 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDKeyedHeightCache.m"; path = "Classes/UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
 		E60CA9009414B4BBF5A41F1A0B3185DB /* Pods-TestTableManagerDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestTableManagerDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E9D0BCD2AC32DDB7AB935CA60860A98C /* Pods-TestTableManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestTableManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EAB4672D76D2FE89F21A8A3378710684 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDKeyedHeightCache.h"; path = "Classes/UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		EB8C868061C8A163EFCB691FB46054D1 /* Pods-TestTableManagerDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestTableManagerDemoUITests-dummy.m"; sourceTree = "<group>"; };
 		F0806F551196B4E917D68D3EF7CEF035 /* Pods-TestTableManagerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestTableManagerDemo-dummy.m"; sourceTree = "<group>"; };
 		F19CA5ACE66C747AFD8A75EADF98AD55 /* Pods-TestTableManagerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestTableManagerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F1ACFC97BB86F7B8A48CB94F79B92297 /* libJDragonTableManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJDragonTableManager.a; path = libJDragonTableManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F280510F0F5A15E71DFA1AF1BB78CC56 /* JDragonTableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JDragonTableManager.h; path = JDragonTableManager/JDragonTableManager.h; sourceTree = "<group>"; };
+		F51A3506B6532F69C2FEB7E7B60CB712 /* libPods-TestTableManagerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestTableManagerDemoUITests.a"; path = "libPods-TestTableManagerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5D21B6DF1E0057E464E5F209A9663B /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCell.m"; path = "Classes/UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		FBED6D4BFDDB558BCED53679ED20DA69 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCellDebug.h"; path = "Classes/UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		749B8BFE553664745F8089F56024F36F /* Frameworks */ = {
+		2AE4A5021DC595222284BD8B592498CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A808496C2DE74476260C408791B8BAB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		963CF5200E069DF4467745115379ADB9 /* Frameworks */ = {
+		9A996677379CB9126947BEFB52FB32DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AF1BC0B036ECCB6FCF80308464EEAE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAFBC213087461C26817675F059CEAE2 /* Frameworks */ = {
+		AEF94C4E367E5885260279EF21378E3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F28154DD80F947112CB78BC6ACFC70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAC77E74AC93794AF97A6F2DAFC4D1D2 /* Frameworks */ = {
+		B756C85239F32F1BBA58852F0FAA5E3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5022120409225C78E8E60CE39CB317 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EFB3EE6041733983004FEA40808E7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CEF39C252A4FCA0B8ECFFBF58BA5907 /* Development Pods */ = {
+		0F7E9DA5973D2A7E2A0E40CDDD8834FE /* JDragonTableManager */ = {
 			isa = PBXGroup;
 			children = (
-				6EE619F24F04E20394A5634A68DE4F16 /* JDragonTableManager */,
+				F280510F0F5A15E71DFA1AF1BB78CC56 /* JDragonTableManager.h */,
+				C7A76172BD57FCEF4F1412D86324F5B9 /* JDragonTableManager.m */,
+				76CBBF5166799DDFCD0345E59A5616DB /* UITableView+JDragonTableManager.h */,
+				5F295C2C351F69B05BF3CD1B875F9750 /* UITableView+JDragonTableManager.m */,
+				249DEA2AA9B25FAF521D14779329B994 /* Pod */,
+				210A10897AA6D06EB63570F0CBA8F9F5 /* Support Files */,
+			);
+			name = JDragonTableManager;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		210A10897AA6D06EB63570F0CBA8F9F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9696028A33B78DF12C3F4D03FEC2EF38 /* JDragonTableManager.xcconfig */,
+				43A4D7E9A1E28DA8FD2928801B637E45 /* JDragonTableManager-dummy.m */,
+				109C13293ABF0AC82A13D2ED01E312A3 /* JDragonTableManager-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "TestTableManagerDemo/Pods/Target Support Files/JDragonTableManager";
+			sourceTree = "<group>";
+		};
+		249DEA2AA9B25FAF521D14779329B994 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6EDAE7BC81C6E87B1F6AC9D7092C9FFD /* JDragonTableManager.podspec */,
+				575A2A79301B5F7B2EFB990B69D7CA52 /* LICENSE */,
+				86A6E01A92A35016E0DFFC3DB18E1309 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		2C138BA27445E2A17CC715F8DA396A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58751A7C29D7F1EE80CC4522ED9A22E8 /* UITableView+FDTemplateLayoutCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		42B1EB4A116191988C8FBD2BEA8025EA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F7E9DA5973D2A7E2A0E40CDDD8834FE /* JDragonTableManager */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		187F0B5BA9B02F2EB5240F036F09F159 /* Products */ = {
+		58751A7C29D7F1EE80CC4522ED9A22E8 /* UITableView+FDTemplateLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
-				F1ACFC97BB86F7B8A48CB94F79B92297 /* libJDragonTableManager.a */,
-				9D2AE371BC61CBBC956523D4B8ABEEA7 /* libPods-TestTableManagerDemo.a */,
-				7CEE6EE275CAB2A789A6111C19F162C6 /* libPods-TestTableManagerDemoTests.a */,
-				AD20314ACD0880E185A7521EC2A84938 /* libPods-TestTableManagerDemoUITests.a */,
+				D1F0AEAEC04C91878522FD4C360592ED /* UITableView+FDIndexPathHeightCache.h */,
+				B778352D1AE42B12B6ED52146DC158EB /* UITableView+FDIndexPathHeightCache.m */,
+				EAB4672D76D2FE89F21A8A3378710684 /* UITableView+FDKeyedHeightCache.h */,
+				E58AF82BAC51E30C2DD73BC5443498E7 /* UITableView+FDKeyedHeightCache.m */,
+				25DED341B760D28F414F03E6E64BDC48 /* UITableView+FDTemplateLayoutCell.h */,
+				FA5D21B6DF1E0057E464E5F209A9663B /* UITableView+FDTemplateLayoutCell.m */,
+				FBED6D4BFDDB558BCED53679ED20DA69 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				3D41F887F6A1003258DE15B8ED12FFFE /* UITableView+FDTemplateLayoutCellDebug.m */,
+				D8E78E364B909B3ECC7D55C075BC6189 /* Support Files */,
 			);
-			name = Products;
+			name = "UITableView+FDTemplateLayoutCell";
+			path = "UITableView+FDTemplateLayoutCell";
 			sourceTree = "<group>";
 		};
 		5881D8DF120964571F0326E842EF82CC /* Pods-TestTableManagerDemoTests */ = {
@@ -138,42 +244,14 @@
 			path = "Target Support Files/Pods-TestTableManagerDemoTests";
 			sourceTree = "<group>";
 		};
-		6EE619F24F04E20394A5634A68DE4F16 /* JDragonTableManager */ = {
-			isa = PBXGroup;
-			children = (
-				7F7E8868D6874FA87D036993470B8220 /* JDragonTableManager */,
-				6EFFECDD4DE0F664EA115B9211208214 /* Support Files */,
-			);
-			name = JDragonTableManager;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		6EFFECDD4DE0F664EA115B9211208214 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF0E67747CFE5749C16E3AD2DB8A62AA /* JDragonTableManager.xcconfig */,
-				551DBF041943B9EE7B4AC675EF326B9E /* JDragonTableManager-dummy.m */,
-				C011072E3F2D13261BE70CEB0AAF4F1B /* JDragonTableManager-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "TestTableManagerDemo/Pods/Target Support Files/JDragonTableManager";
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0CEF39C252A4FCA0B8ECFFBF58BA5907 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				187F0B5BA9B02F2EB5240F036F09F159 /* Products */,
+				42B1EB4A116191988C8FBD2BEA8025EA /* Development Pods */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				2C138BA27445E2A17CC715F8DA396A4E /* Pods */,
+				ECABCE69350C65F13410C4E2CFA85DF5 /* Products */,
 				7DE094133BFC7BCBD47F48D4005A9F40 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -186,18 +264,6 @@
 				9B7EDE100DD7CF762A788FCC97C87841 /* Pods-TestTableManagerDemoUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7F7E8868D6874FA87D036993470B8220 /* JDragonTableManager */ = {
-			isa = PBXGroup;
-			children = (
-				2EEDEEB7920DA2473BF7D31066F321C7 /* JDragonTableManager.h */,
-				5ED592F1FD0AF949C6FCA01AC15F276C /* JDragonTableManager.m */,
-				244044C4AF1E33970E6FCF408CE057C1 /* UITableView+JDragonTableManager.h */,
-				C9605BB303673A8A8A8674CC907B7403 /* UITableView+JDragonTableManager.m */,
-			);
-			name = JDragonTableManager;
-			path = JDragonTableManager;
 			sourceTree = "<group>";
 		};
 		9B7EDE100DD7CF762A788FCC97C87841 /* Pods-TestTableManagerDemoUITests */ = {
@@ -230,93 +296,140 @@
 			path = "Target Support Files/Pods-TestTableManagerDemo";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		D8E78E364B909B3ECC7D55C075BC6189 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				1E8FF76C5B431E3E40CD3A7783C1D120 /* UITableView+FDTemplateLayoutCell.xcconfig */,
+				46602CA47FB3BE58BAB06537FAF2C801 /* UITableView+FDTemplateLayoutCell-dummy.m */,
+				117B8AA10EE0909223E21F6A15B1DAA6 /* UITableView+FDTemplateLayoutCell-prefix.pch */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/UITableView+FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
+		ECABCE69350C65F13410C4E2CFA85DF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0217A0506F03FE9EF625C01D28AD1B1 /* libJDragonTableManager.a */,
+				673FB5F594169FA44ACE80931D819174 /* libPods-TestTableManagerDemo.a */,
+				9D1D152386F33F7C3BBB337CCBBEFB95 /* libPods-TestTableManagerDemoTests.a */,
+				F51A3506B6532F69C2FEB7E7B60CB712 /* libPods-TestTableManagerDemoUITests.a */,
+				CFA218121B84AC0BE9FA8BAAAFEE8756 /* libUITableView+FDTemplateLayoutCell.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FB88B5320FFA4690A2E7D9E4CD5C8885 /* Headers */ = {
+		21D590A55E4944F3CA2C106EE3272C90 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1675630220A7B4F5EDD22D5B4110DBBB /* JDragonTableManager.h in Headers */,
-				D8A28E588BCE521E1B7E563666E7AD6F /* UITableView+JDragonTableManager.h in Headers */,
+				90AE1631CE90371745DE57A156832062 /* JDragonTableManager.h in Headers */,
+				41D831FA7ABCDE66E1D5C99D82B78501 /* UITableView+JDragonTableManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453F80898ED5AECAC11D3547BD97283C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A9BCC1A9F84F54171475D430E992DD /* UITableView+FDIndexPathHeightCache.h in Headers */,
+				E16C3DBAC723D02C1F2DE172869036BE /* UITableView+FDKeyedHeightCache.h in Headers */,
+				D5D8CB6DE3DA7F361BEAD8D0180F9D22 /* UITableView+FDTemplateLayoutCell.h in Headers */,
+				D139BE58A8E7CD42A7FDDAF74C8A66D6 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		400A952A43D5E627B80C06AC594BA94E /* Pods-TestTableManagerDemo */ = {
+		0260E57F10BD87C20B12FBD2E27627A8 /* UITableView+FDTemplateLayoutCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 493091E746C8033A1AE3DFCA8D6818CE /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemo" */;
+			buildConfigurationList = 40053BAE8483753EA506D4E9A4078148 /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */;
 			buildPhases = (
-				B02F2DB0469E14898ABC2C8129DCE03B /* Sources */,
-				963CF5200E069DF4467745115379ADB9 /* Frameworks */,
+				C26D87544B86F1B0E2422B0F1EC4A818 /* Sources */,
+				2AE4A5021DC595222284BD8B592498CB /* Frameworks */,
+				453F80898ED5AECAC11D3547BD97283C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6C9D748CA692C3A9A6C7993E7A823F75 /* PBXTargetDependency */,
 			);
-			name = "Pods-TestTableManagerDemo";
-			productName = "Pods-TestTableManagerDemo";
-			productReference = 9D2AE371BC61CBBC956523D4B8ABEEA7 /* libPods-TestTableManagerDemo.a */;
+			name = "UITableView+FDTemplateLayoutCell";
+			productName = "UITableView+FDTemplateLayoutCell";
+			productReference = CFA218121B84AC0BE9FA8BAAAFEE8756 /* libUITableView+FDTemplateLayoutCell.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		759C1E136C510F7861D2244AD33AA5A1 /* Pods-TestTableManagerDemoTests */ = {
+		11EE4FF3D48C8A5007FFAB2623B4202C /* Pods-TestTableManagerDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21369CD80904B13A4CB9DE98499252F0 /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoTests" */;
+			buildConfigurationList = DA9F71A2AE9D541949D9D1B21294E80B /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoTests" */;
 			buildPhases = (
-				74788173B10E92E2B04D17FD7BD453BD /* Sources */,
-				BAFBC213087461C26817675F059CEAE2 /* Frameworks */,
+				74CC275DFB9F0D5DB6C6BE24927AE236 /* Sources */,
+				9A996677379CB9126947BEFB52FB32DE /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD99ABC00C859730529346855CB594D3 /* PBXTargetDependency */,
 			);
 			name = "Pods-TestTableManagerDemoTests";
 			productName = "Pods-TestTableManagerDemoTests";
-			productReference = 7CEE6EE275CAB2A789A6111C19F162C6 /* libPods-TestTableManagerDemoTests.a */;
+			productReference = 9D1D152386F33F7C3BBB337CCBBEFB95 /* libPods-TestTableManagerDemoTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8C1752C9403229223EF191429AD01149 /* JDragonTableManager */ = {
+		A25212D97DA9C0E701920273C9D504BD /* Pods-TestTableManagerDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 136BCC9998806899BAE8FC6DA71C56C0 /* Build configuration list for PBXNativeTarget "JDragonTableManager" */;
+			buildConfigurationList = 464C4BBBF6FEEC3A82404DFE69B5733B /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemo" */;
 			buildPhases = (
-				0BE5F0DD6C1B00ED135A153D90CBF643 /* Sources */,
-				749B8BFE553664745F8089F56024F36F /* Frameworks */,
-				FB88B5320FFA4690A2E7D9E4CD5C8885 /* Headers */,
+				CBAEBEF0C3E8D02A64B5127221856D2D /* Sources */,
+				D1EFB3EE6041733983004FEA40808E7D /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3E663C5728F196F78C72921256FB98C4 /* PBXTargetDependency */,
+				F988A4E23EBE89A3DAF5BF3DD86DC12D /* PBXTargetDependency */,
 			);
-			name = JDragonTableManager;
-			productName = JDragonTableManager;
-			productReference = F1ACFC97BB86F7B8A48CB94F79B92297 /* libJDragonTableManager.a */;
+			name = "Pods-TestTableManagerDemo";
+			productName = "Pods-TestTableManagerDemo";
+			productReference = 673FB5F594169FA44ACE80931D819174 /* libPods-TestTableManagerDemo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		9DC3B3FCB6A94CE2858A6EF858A6E433 /* Pods-TestTableManagerDemoUITests */ = {
+		B1F33CB661B877312EAB8E38E9AA2B9C /* Pods-TestTableManagerDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5020594A693D58A2087293EDAA0ECDF5 /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoUITests" */;
+			buildConfigurationList = 2B7137DB4446971F5FBFE4CFAC586273 /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoUITests" */;
 			buildPhases = (
-				9BE924A639885C9D938CD29550A66CD4 /* Sources */,
-				DAC77E74AC93794AF97A6F2DAFC4D1D2 /* Frameworks */,
+				00312599C03B63F1983B7CEF11961F2B /* Sources */,
+				B756C85239F32F1BBA58852F0FAA5E3F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E0BE716B22F6D3C08114B17A4FB302B5 /* PBXTargetDependency */,
 			);
 			name = "Pods-TestTableManagerDemoUITests";
 			productName = "Pods-TestTableManagerDemoUITests";
-			productReference = AD20314ACD0880E185A7521EC2A84938 /* libPods-TestTableManagerDemoUITests.a */;
+			productReference = F51A3506B6532F69C2FEB7E7B60CB712 /* libPods-TestTableManagerDemoUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E492FE209EC7E59CACD33FF7A8F07432 /* JDragonTableManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635AD4827BBD695E257DBC1002BA8CE6 /* Build configuration list for PBXNativeTarget "JDragonTableManager" */;
+			buildPhases = (
+				843D09F51D62F21D7291A065B99DF6CE /* Sources */,
+				AEF94C4E367E5885260279EF21378E3C /* Frameworks */,
+				21D590A55E4944F3CA2C106EE3272C90 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C684C23574450B81BB3FA90A7421EF77 /* PBXTargetDependency */,
+			);
+			name = JDragonTableManager;
+			productName = JDragonTableManager;
+			productReference = C0217A0506F03FE9EF625C01D28AD1B1 /* libJDragonTableManager.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -325,8 +438,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -336,350 +449,454 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 187F0B5BA9B02F2EB5240F036F09F159 /* Products */;
+			productRefGroup = ECABCE69350C65F13410C4E2CFA85DF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C1752C9403229223EF191429AD01149 /* JDragonTableManager */,
-				400A952A43D5E627B80C06AC594BA94E /* Pods-TestTableManagerDemo */,
-				759C1E136C510F7861D2244AD33AA5A1 /* Pods-TestTableManagerDemoTests */,
-				9DC3B3FCB6A94CE2858A6EF858A6E433 /* Pods-TestTableManagerDemoUITests */,
+				E492FE209EC7E59CACD33FF7A8F07432 /* JDragonTableManager */,
+				A25212D97DA9C0E701920273C9D504BD /* Pods-TestTableManagerDemo */,
+				11EE4FF3D48C8A5007FFAB2623B4202C /* Pods-TestTableManagerDemoTests */,
+				B1F33CB661B877312EAB8E38E9AA2B9C /* Pods-TestTableManagerDemoUITests */,
+				0260E57F10BD87C20B12FBD2E27627A8 /* UITableView+FDTemplateLayoutCell */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0BE5F0DD6C1B00ED135A153D90CBF643 /* Sources */ = {
+		00312599C03B63F1983B7CEF11961F2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0D2F01A08888E24B35F4E75921049E9 /* JDragonTableManager-dummy.m in Sources */,
-				A09604296B79E2A3CA8AD30A5C484D68 /* JDragonTableManager.m in Sources */,
-				C61F5C59E649EA30C6570106FBBC9330 /* UITableView+JDragonTableManager.m in Sources */,
+				5828D445B0972FD22AD874C7EE64B2E4 /* Pods-TestTableManagerDemoUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74788173B10E92E2B04D17FD7BD453BD /* Sources */ = {
+		74CC275DFB9F0D5DB6C6BE24927AE236 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82BB2C958B403BD35CE2B5D8D4E369EF /* Pods-TestTableManagerDemoTests-dummy.m in Sources */,
+				8E513AC844D80BFD871142AEC751EFFD /* Pods-TestTableManagerDemoTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BE924A639885C9D938CD29550A66CD4 /* Sources */ = {
+		843D09F51D62F21D7291A065B99DF6CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F6B43E1798BADDFE014DB71CA897EC /* Pods-TestTableManagerDemoUITests-dummy.m in Sources */,
+				E7E31D7827F570F9C00C75689BAF89A3 /* JDragonTableManager-dummy.m in Sources */,
+				C3B44181C8DC379D0108160CEA825309 /* JDragonTableManager.m in Sources */,
+				CBE1109DFD2EBF5C1EA5BD0C5CD68053 /* UITableView+JDragonTableManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B02F2DB0469E14898ABC2C8129DCE03B /* Sources */ = {
+		C26D87544B86F1B0E2422B0F1EC4A818 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE6193898AFFFA3A4E0AE3B3D55A565C /* Pods-TestTableManagerDemo-dummy.m in Sources */,
+				6EB8CEFB16405C59F1D4689A95FCA9C3 /* UITableView+FDIndexPathHeightCache.m in Sources */,
+				CFC11CBD03E01D26769AA8E0E2BF8E3D /* UITableView+FDKeyedHeightCache.m in Sources */,
+				5E5EEDAFB049BE3F99B4691FC084DA43 /* UITableView+FDTemplateLayoutCell-dummy.m in Sources */,
+				34D0764EC68BE6545A3EF34A70861592 /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				027526785FB5877B45641078AF55D656 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBAEBEF0C3E8D02A64B5127221856D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B92516DA0BD7266262BA207EB33069E /* Pods-TestTableManagerDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6C9D748CA692C3A9A6C7993E7A823F75 /* PBXTargetDependency */ = {
+		3E663C5728F196F78C72921256FB98C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JDragonTableManager;
-			target = 8C1752C9403229223EF191429AD01149 /* JDragonTableManager */;
-			targetProxy = F526486F6CC3883D7E644DF995E2BB96 /* PBXContainerItemProxy */;
+			target = E492FE209EC7E59CACD33FF7A8F07432 /* JDragonTableManager */;
+			targetProxy = F378087F604468D490BD11614D18BB0E /* PBXContainerItemProxy */;
+		};
+		C684C23574450B81BB3FA90A7421EF77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UITableView+FDTemplateLayoutCell";
+			target = 0260E57F10BD87C20B12FBD2E27627A8 /* UITableView+FDTemplateLayoutCell */;
+			targetProxy = F17A8CCCB041D13A8D57515AEB8EEDC3 /* PBXContainerItemProxy */;
+		};
+		DD99ABC00C859730529346855CB594D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TestTableManagerDemo";
+			target = A25212D97DA9C0E701920273C9D504BD /* Pods-TestTableManagerDemo */;
+			targetProxy = C0BD41568EF8160F713DA4507A5F91AB /* PBXContainerItemProxy */;
+		};
+		E0BE716B22F6D3C08114B17A4FB302B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TestTableManagerDemo";
+			target = A25212D97DA9C0E701920273C9D504BD /* Pods-TestTableManagerDemo */;
+			targetProxy = C6E6C42D9E802EBAF9000AC481847A21 /* PBXContainerItemProxy */;
+		};
+		F988A4E23EBE89A3DAF5BF3DD86DC12D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UITableView+FDTemplateLayoutCell";
+			target = 0260E57F10BD87C20B12FBD2E27627A8 /* UITableView+FDTemplateLayoutCell */;
+			targetProxy = DAA3DB406A1B74E852AE5E5FCB1295C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4B5C98299CF0AE9833618CBCD92D209C /* Debug */ = {
+		0044E1EFA597BCA42A618A7D53DC4B8E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD9810316262F8882813BB2338089EEB /* Pods-TestTableManagerDemoUITests.debug.xcconfig */;
+			baseConfigurationReference = 1E8FF76C5B431E3E40CD3A7783C1D120 /* UITableView+FDTemplateLayoutCell.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = UITableView_FDTemplateLayoutCell;
+				PRODUCT_NAME = "UITableView+FDTemplateLayoutCell";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		4FCBC0B0CD0A28592AE26741F083C6ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F66A6ACDFE9244F23DA785ED747360 /* Pods-TestTableManagerDemoUITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		65859312FD607D08D20E5C9C88BBC35E /* Debug */ = {
+		157C48ACAA56CA30F69EBB962300D369 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41D58F19C821BB7E57AE3114D4CF349B /* Pods-TestTableManagerDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */ = {
+		5203AD0E91130C03644C6641215E45B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F95BCFBECEDEECC95F0638DB2709E2 /* Pods-TestTableManagerDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		535BA89A0CBF0AE310A1DFDFC031CD52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9696028A33B78DF12C3F4D03FEC2EF38 /* JDragonTableManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JDragonTableManager/JDragonTableManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JDragonTableManager;
+				PRODUCT_NAME = JDragonTableManager;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83B424BCAF733B4FA73A678EDAE84E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E8FF76C5B431E3E40CD3A7783C1D120 /* UITableView+FDTemplateLayoutCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = UITableView_FDTemplateLayoutCell;
+				PRODUCT_NAME = "UITableView+FDTemplateLayoutCell";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EE20669D1F8328069A96325FE6864A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9696028A33B78DF12C3F4D03FEC2EF38 /* JDragonTableManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JDragonTableManager/JDragonTableManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JDragonTableManager;
+				PRODUCT_NAME = JDragonTableManager;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA3E86B2CD6BADA5A744115A74BE9D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D0BCD2AC32DDB7AB935CA60860A98C /* Pods-TestTableManagerDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5B59A82A8FE8B2A3DE43AB8B63B73B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F66A6ACDFE9244F23DA785ED747360 /* Pods-TestTableManagerDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7316F368CCACF4023193AC06D7771FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EBB1D34A224082991000F41EB54CBD0 /* Pods-TestTableManagerDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9AC12289CD8978D51F9223B457E7DCA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		7E8D7796FCBAB25C088213FF785D094C /* Release */ = {
+		DBDF078C6A1B90D7FD528A0FBC73FA51 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF0E67747CFE5749C16E3AD2DB8A62AA /* JDragonTableManager.xcconfig */;
+			baseConfigurationReference = AD9810316262F8882813BB2338089EEB /* Pods-TestTableManagerDemoUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JDragonTableManager/JDragonTableManager-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		9BA0BC2A039AFC18C9308AFDFCD22657 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9D0BCD2AC32DDB7AB935CA60860A98C /* Pods-TestTableManagerDemo.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9D16ADF9FE33B6435B57A9E67EB1EADD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5F95BCFBECEDEECC95F0638DB2709E2 /* Pods-TestTableManagerDemoTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B142EF0139A87F7510CBEF4B6D937607 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EBB1D34A224082991000F41EB54CBD0 /* Pods-TestTableManagerDemo.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		CF7953F66E785E8876EB4D370D777D50 /* Debug */ = {
+		DEC9569BB66BEC125260336D8D9273BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		FA2B53C219589EE9A180633E635B74C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF0E67747CFE5749C16E3AD2DB8A62AA /* JDragonTableManager.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/JDragonTableManager/JDragonTableManager-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		136BCC9998806899BAE8FC6DA71C56C0 /* Build configuration list for PBXNativeTarget "JDragonTableManager" */ = {
+		2B7137DB4446971F5FBFE4CFAC586273 /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA2B53C219589EE9A180633E635B74C9 /* Debug */,
-				7E8D7796FCBAB25C088213FF785D094C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21369CD80904B13A4CB9DE98499252F0 /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65859312FD607D08D20E5C9C88BBC35E /* Debug */,
-				9D16ADF9FE33B6435B57A9E67EB1EADD /* Release */,
+				DBDF078C6A1B90D7FD528A0FBC73FA51 /* Debug */,
+				B5B59A82A8FE8B2A3DE43AB8B63B73B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -687,26 +904,44 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF7953F66E785E8876EB4D370D777D50 /* Debug */,
-				79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */,
+				DEC9569BB66BEC125260336D8D9273BA /* Debug */,
+				B9AC12289CD8978D51F9223B457E7DCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		493091E746C8033A1AE3DFCA8D6818CE /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemo" */ = {
+		40053BAE8483753EA506D4E9A4078148 /* Build configuration list for PBXNativeTarget "UITableView+FDTemplateLayoutCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BA0BC2A039AFC18C9308AFDFCD22657 /* Debug */,
-				B142EF0139A87F7510CBEF4B6D937607 /* Release */,
+				83B424BCAF733B4FA73A678EDAE84E33 /* Debug */,
+				0044E1EFA597BCA42A618A7D53DC4B8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5020594A693D58A2087293EDAA0ECDF5 /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoUITests" */ = {
+		464C4BBBF6FEEC3A82404DFE69B5733B /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B5C98299CF0AE9833618CBCD92D209C /* Debug */,
-				4FCBC0B0CD0A28592AE26741F083C6ED /* Release */,
+				AA3E86B2CD6BADA5A744115A74BE9D84 /* Debug */,
+				B7316F368CCACF4023193AC06D7771FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635AD4827BBD695E257DBC1002BA8CE6 /* Build configuration list for PBXNativeTarget "JDragonTableManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				535BA89A0CBF0AE310A1DFDFC031CD52 /* Debug */,
+				8EE20669D1F8328069A96325FE6864A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9F71A2AE9D541949D9D1B21294E80B /* Build configuration list for PBXNativeTarget "Pods-TestTableManagerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157C48ACAA56CA30F69EBB962300D369 /* Debug */,
+				5203AD0E91130C03644C6641215E45B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
