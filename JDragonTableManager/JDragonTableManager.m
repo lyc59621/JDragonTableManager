@@ -79,6 +79,11 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
+            return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView heightForRowAtIndexPath:indexPath];
+        }
+    }
     if (!self.isAutoHeight) {
         return  self.tableView.rowHeight;
     }
@@ -97,6 +102,30 @@
     //
     //
     //    }];
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(nullable NSIndexPath *)indexPath
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView didEndEditingRowAtIndexPath:indexPath];
+        }
+    }
 }
 #pragma mark----------------------------------TabDataSource-------------------------------
 + (instancetype)dataSource:(NSArray *)source tabType:(JDTabHelpType)tabType tableView:(UITableView *)tableView TabVC:(UIViewController*)TabVC isSection:(BOOL)isSection andReuseIdentifier:(NSString *)reuseIdentifier{
@@ -213,7 +242,6 @@
 }
 -(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentVC respondsToSelector:@selector(tableView:viewForFooterInSection:)]) {
             return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView viewForFooterInSection:section];
@@ -255,11 +283,54 @@
     //    NSTimeInterval endTime = [[NSDate date] timeIntervalSince1970];
     //    NSLog(@"cell %@ ,加载时间:%lf",indexPath,endTime - startLoadTime);
 }
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
+            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView canEditRowAtIndexPath:indexPath ];
+        }
+    }
+    return false;
+}
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
+           return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView canMoveRowAtIndexPath:indexPath ];
+        }
+    }
+    return false;
+}
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+//{
+//    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+//        if ([self.currentVC respondsToSelector:@selector(tableView:sectionForSectionIndexTitle:atIndex:)]) {
+//        return     [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
+//        }
+//    }
+//    return 0;
+//}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
+            [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
+        }
+    }
+}
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(scrollViewDidScroll:)]) {
+            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidScroll:scrollView];
         }
     }
 }

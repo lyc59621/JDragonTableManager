@@ -268,7 +268,7 @@
 				TargetAttributes = {
 					6939741C1E077908009B6786 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = NBCMCCDR2L;
+						DevelopmentTeam = RR4N8AJ6T9;
 						ProvisioningStyle = Automatic;
 					};
 					693974381E077908009B6786 = {
@@ -550,7 +550,7 @@
 			baseConfigurationReference = 0731D1B01CE8416037824753 /* Pods-TestTableManagerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NBCMCCDR2L;
+				DEVELOPMENT_TEAM = RR4N8AJ6T9;
 				INFOPLIST_FILE = TestTableManagerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -564,7 +564,7 @@
 			baseConfigurationReference = 458F0FCB31B0D6544576E487 /* Pods-TestTableManagerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NBCMCCDR2L;
+				DEVELOPMENT_TEAM = RR4N8AJ6T9;
 				INFOPLIST_FILE = TestTableManagerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
