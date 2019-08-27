@@ -84,7 +84,7 @@
             return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView heightForRowAtIndexPath:indexPath];
         }
     }
-    if (!self.isAutoHeight) {
+    if (self.isAutoHeight) {
         return  self.tableView.rowHeight;
     }
     NSString  *reuse = @"";
@@ -194,7 +194,7 @@
     
     self.headerHeight = hHeight;
     self.footerHeight = fHeight;
-    self.isAutoHeight = true;
+    self.isAutoHeight = self.tableView.estimatedRowHeight>0?true:false;
     self.tableView.delegate = self;
     self.selectCellBlock = selectBlock;
 }
