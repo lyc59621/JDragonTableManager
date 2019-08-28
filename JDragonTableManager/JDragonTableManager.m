@@ -56,6 +56,8 @@
     }
     return self;
 }
+#pragma mark---------UITableViewDelegate-------------
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentVC respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
@@ -72,10 +74,6 @@
         }
     }
     return !self.footerHeight?0.0001:self.footerHeight;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    self.selectCellBlock(indexPath);
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -103,6 +101,10 @@
     //
     //    }];
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    self.selectCellBlock(indexPath);
+}
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
@@ -127,6 +129,9 @@
         }
     }
 }
+
+
+
 #pragma mark----------------------------------TabDataSource-------------------------------
 + (instancetype)dataSource:(NSArray *)source tabType:(JDTabHelpType)tabType tableView:(UITableView *)tableView TabVC:(UIViewController*)TabVC isSection:(BOOL)isSection andReuseIdentifier:(NSString *)reuseIdentifier{
     return [[[self class] alloc] initWithSource:source tabType:tabType tableView:tableView isSection:isSection tabVC:TabVC andReuseIdentifier:reuseIdentifier];
@@ -194,52 +199,26 @@
     
     self.headerHeight = hHeight;
     self.footerHeight = fHeight;
+    //    self.isAutoHeight = true;
     self.isAutoHeight = self.tableView.estimatedRowHeight>0?true:false;
     self.tableView.delegate = self;
     self.selectCellBlock = selectBlock;
 }
-#pragma mark - Table view data source
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+
+-(void)setReuseArrayInSectionTypeWithArray:(NSArray*)array
 {
-    NSInteger  count = 1;
-    if (_isSection) {
-        count = self.data.count;
-    }
-    return count;
+    _reuseIdentArr = array;
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    NSInteger  count = self.data.count;
-    if (_isSection) {
-        switch (self.tabHelpType) {
-            case Test:
-            case NumberOfRowsInSectionCount:
-                count = self.data.count;
-                break;
-            case NumberOfRowsInSectionOne:
-                count=1;
-                break;
-            case NumberOfRowsInSectionNum:
-                count = ((NSArray*)self.data[section]).count;
-                break;
-            default:
-                break;
-        }
-    }
-    return count;
+-(void)updateReloadData:(NSArray*)datas
+{
+    self.data = datas;
+    [_tableView reloadData];
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell;
-    if (_reuseIdentArr!=nil) {
-        cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentArr[indexPath.section] forIndexPath:indexPath];
-    }else
-    {
-        cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
-    }
-    [self cellDataInfoWithCell:cell withIndexPath:indexPath];
-    
-    return cell;
+-(void)updateData:(NSArray*)datas
+{
+    self.data = datas;
 }
+
 -(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
@@ -283,6 +262,69 @@
     //    NSTimeInterval endTime = [[NSDate date] timeIntervalSince1970];
     //    NSLog(@"cell %@ ,加载时间:%lf",indexPath,endTime - startLoadTime);
 }
+#pragma mark---------UITableViewDataSource-------------
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    NSInteger  count = 1;
+    if (_isSection) {
+        count = self.data.count;
+    }
+    return count;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    NSInteger  count = self.data.count;
+    if (_isSection) {
+        switch (self.tabHelpType) {
+            case Test:
+            case NumberOfRowsInSectionCount:
+                count = self.data.count;
+                break;
+            case NumberOfRowsInSectionOne:
+                count=1;
+                break;
+            case NumberOfRowsInSectionNum:
+                count = ((NSArray*)self.data[section]).count;
+                break;
+            default:
+                break;
+        }
+    }
+    return count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell;
+    if (_reuseIdentArr!=nil) {
+        cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentArr[indexPath.section] forIndexPath:indexPath];
+    }else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
+    }
+    [self cellDataInfoWithCell:cell withIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:titleForHeaderInSection:)]) {
+            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView titleForHeaderInSection:section ];
+        }
+    }
+    return @"";
+}
+- (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(tableView:titleForFooterInSection:)]) {
+            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView titleForFooterInSection:section ];
+        }
+    }
+    return @"";
+}
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
@@ -296,20 +338,34 @@
 {
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
         if ([self.currentVC respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
-           return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView canMoveRowAtIndexPath:indexPath ];
+            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView canMoveRowAtIndexPath:indexPath ];
         }
     }
     return false;
 }
-//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-//{
-//    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-//        if ([self.currentVC respondsToSelector:@selector(tableView:sectionForSectionIndexTitle:atIndex:)]) {
-//        return     [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
-//        }
-//    }
-//    return 0;
-//}
+
+- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
+            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  sectionIndexTitlesForTableView:tableView ];
+        }
+    }
+    NSMutableArray  *strArray = [[NSMutableArray alloc]init];
+    for (NSInteger i=0; i<self.data.count; i++) {
+        [strArray addObject:@""];
+    }
+    return strArray;
+}
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentVC respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
+            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
+        }
+    }
+    return 0;
+}
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
@@ -320,12 +376,16 @@
 }
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
+    
     if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
         if ([self.currentVC respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
             [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
         }
     }
 }
+
+#pragma mark---------UIScrollViewDelegate-------------
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
@@ -334,19 +394,39 @@
         }
     }
 }
--(void)setReuseArrayInSectionTypeWithArray:(NSArray*)array
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    _reuseIdentArr = array;
+    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewWillBeginDragging:scrollView];
+        }
+    }
 }
--(void)updateReloadData:(NSArray*)datas
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    self.data = datas;
-    [_tableView reloadData];
+    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
+            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+        }
+    }
 }
--(void)updateData:(NSArray*)datas
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
-    self.data = datas;
+    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
+            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewWillBeginDecelerating:scrollView];
+        }
+    }
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
+            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndDecelerating:scrollView];
+        }
+    }
 }
 
 @end
+
 
