@@ -410,6 +410,14 @@
     }
 }
 
+
+
+
+
+
+
+
+
 #pragma mark-------------------UIScrollViewDelegate----------------------------
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -449,6 +457,56 @@
     if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
         if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
             [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndDecelerating:scrollView];
+        }
+    }
+}
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
+            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndScrollingAnimation:scrollView];
+        }
+    }
+}
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentVC respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
+           return [( UIViewController<UIScrollViewDelegate> *)self.currentVC  viewForZoomingInScrollView:scrollView];
+        }
+    }
+    return nil;
+}
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view
+{
+   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+      if ([self.currentVC respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
+          [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewWillBeginZooming:scrollView withView:view];
+        }
+    }
+}
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale
+{
+   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+       if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
+           [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndZooming:scrollView withView:view atScale:scale];
+        }
+    }
+}
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+{
+   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+       if ([self.currentVC respondsToSelector:@selector(scrollViewShouldScrollToTop:)]) {
+         return [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewShouldScrollToTop:scrollView];
+        }
+    }
+    return true;
+}
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
+{
+   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+       if ([self.currentVC respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
+          [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidScrollToTop:scrollView];
         }
     }
 }

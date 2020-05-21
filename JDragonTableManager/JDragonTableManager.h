@@ -11,8 +11,11 @@
 
 /*
   README
+  关于cell高度:
   通过设置TableView属性 estimatedRowHeight 或者 rowHeight 可自由切换自动高计算
   如果两者都关闭，或者都未设置的情况下，采用FD 自动高度计算缓存策略
+ 
+  关于TableView 或者高度:
  */
  
 typedef void(^JDTabSelectCellBlock)(NSIndexPath *indexPath);
