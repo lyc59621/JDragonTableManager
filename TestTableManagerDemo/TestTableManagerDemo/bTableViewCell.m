@@ -11,6 +11,7 @@
 #import "JDragonTableManager.h"
 
 @interface bTableViewCell ()<JDTableManagerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *aLabel;
 
 @end
 
@@ -28,8 +29,9 @@
 }
 -(void)PrepareToWithAppear:(NSObject *)data WithCurentVC:(UIViewController *)curentVC WithIndexPath:(NSIndexPath *)indexPath
 {
-    self.textLabel.text = [data isKindOfClass:[NSString class]]?(NSString*)data:data.description;
-    
+    self.aLabel.text = [data isKindOfClass:[NSString class]]?(NSString*)data:data.description;
+    self.aLabel.numberOfLines = 0;
+
     NSLog(@"data====%@",data);
 }
 

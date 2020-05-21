@@ -28,6 +28,7 @@
 -(void)PrepareToWithAppear:(NSObject *)data WithCurentVC:(UIViewController *)curentVC WithIndexPath:(NSIndexPath *)indexPath
 {
     self.textLabel.text = [data isKindOfClass:[NSString class]]?(NSString*)data:data.description;
+    self.textLabel.numberOfLines = 0;
     
     NSLog(@"data====%@",data);
 }

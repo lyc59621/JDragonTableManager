@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1284256B24767AEB00ECC432 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1284256A24767AEB00ECC432 /* ThreeViewController.m */; };
 		5BF0C82580FB8F0CBBFA4AD3 /* libPods-TestTableManagerDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA8AACB46C02498BDFADEDC /* libPods-TestTableManagerDemoUITests.a */; };
 		693974221E077908009B6786 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974211E077908009B6786 /* main.m */; };
 		693974251E077908009B6786 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 693974241E077908009B6786 /* AppDelegate.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		0731D1B01CE8416037824753 /* Pods-TestTableManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemo/Pods-TestTableManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		0EA8AACB46C02498BDFADEDC /* libPods-TestTableManagerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableManagerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1284256924767AEB00ECC432 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		1284256A24767AEB00ECC432 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		2EC4C1D260582CD1FBBB9FA2 /* libPods-TestTableManagerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTableManagerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		445D6C7D630EE2A1A7892878 /* Pods-TestTableManagerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemoTests/Pods-TestTableManagerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		458F0FCB31B0D6544576E487 /* Pods-TestTableManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTableManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTableManagerDemo/Pods-TestTableManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				693974271E077908009B6786 /* FirstViewController.m */,
 				693974291E077908009B6786 /* SecondViewController.h */,
 				6939742A1E077908009B6786 /* SecondViewController.m */,
+				1284256924767AEB00ECC432 /* ThreeViewController.h */,
+				1284256A24767AEB00ECC432 /* ThreeViewController.m */,
 				6939745D1E077BC9009B6786 /* aTableViewCell.h */,
 				6939745E1E077BC9009B6786 /* aTableViewCell.m */,
 				693974621E077C55009B6786 /* bTableViewCell.h */,
@@ -268,7 +273,7 @@
 				TargetAttributes = {
 					6939741C1E077908009B6786 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = RR4N8AJ6T9;
+						DevelopmentTeam = V6U9CR6DQJ;
 						ProvisioningStyle = Automatic;
 					};
 					693974381E077908009B6786 = {
@@ -290,6 +295,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -396,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				693974651E077C55009B6786 /* bTableViewCell.m in Sources */,
+				1284256B24767AEB00ECC432 /* ThreeViewController.m in Sources */,
 				693974601E077BC9009B6786 /* aTableViewCell.m in Sources */,
 				6939742B1E077908009B6786 /* SecondViewController.m in Sources */,
 				693974251E077908009B6786 /* AppDelegate.m in Sources */,
@@ -495,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -537,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,11 +557,11 @@
 			baseConfigurationReference = 0731D1B01CE8416037824753 /* Pods-TestTableManagerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RR4N8AJ6T9;
+				DEVELOPMENT_TEAM = V6U9CR6DQJ;
 				INFOPLIST_FILE = TestTableManagerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruthout.TestTableManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jdragon.TestTableManagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -564,11 +571,11 @@
 			baseConfigurationReference = 458F0FCB31B0D6544576E487 /* Pods-TestTableManagerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RR4N8AJ6T9;
+				DEVELOPMENT_TEAM = V6U9CR6DQJ;
 				INFOPLIST_FILE = TestTableManagerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruthout.TestTableManagerDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jdragon.TestTableManagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

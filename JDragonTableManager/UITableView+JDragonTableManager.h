@@ -59,9 +59,22 @@
  *
  *  @return TableViewDelagate
  */
+- (id)JDTab_DelegateWithReuseIdentifier:(NSObject *)reuseobj
+                           headerHeight:(CGFloat)hHeight
+                           footerHeight:(CGFloat)fHeight
+                            selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock;
+
+
+/// 获取 tabDelagate
+/// @param hHeight header
+/// @param fHeight footer
+/// @param selectBlock click
 - (id)JDTab_DelegateWithHeaderHeight:(CGFloat)hHeight
                         footerHeight:(CGFloat)fHeight
                          selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock;
+
+
+
 
 //- (id)JDTab_DelegateWithAutoHeight HeaderHeight:(CGFloat)hHeight
 //                                   footerHeight:(CGFloat)fHeight

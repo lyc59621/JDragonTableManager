@@ -32,7 +32,7 @@
 }
 -(void)setUIConfig
 {
-    self.aTableView.estimatedRowHeight = 50;
+    self.aTableView.rowHeight = 90;
     [self.aTableView registerClass:[aTableViewCell class] forCellReuseIdentifier:@"aTableViewCell"];
     [self.aTableView registerNib:[UINib nibWithNibName:@"bTableViewCell" bundle:nil] forCellReuseIdentifier:@"bTableViewCell"];
     self.tabDelagate = [self.aTableView JDTab_DelegateWithHeaderHeight:10 footerHeight:10 selectBlock:^(NSIndexPath *indexPath) {
