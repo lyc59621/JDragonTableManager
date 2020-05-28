@@ -13,44 +13,44 @@
 
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
                      withTabType:(JDTabHelpType)tabType
-                          withVC:(UIViewController*)VC
+                   tabCurrentObj:(UIViewController*)VC
                        isSection:(BOOL)isSection
                  reuseIdentifier:(NSString *)reuseIdentifier
 {
     return [JDragonTableManager
-            dataSource:source tabType:tabType tableView:self tabVC:VC isSection:isSection andReuseIdentifier:reuseIdentifier];
+            dataSource:source tabType:tabType tableView:self tabCurrentObj:VC isSection:isSection andReuseIdentifier:reuseIdentifier];
 }
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
                      withTabType:(JDTabHelpType)tabType
-                          withVC:(UIViewController*)VC
+                   tabCurrentObj:(UIViewController*)currentObj
                        isSection:(BOOL)isSection
               reuseIdentifierArr:(NSArray *)reuseIdentifierArr
 {
-    return [JDragonTableManager dataSource:source tabType:tabType tableView:self tabVC:VC isSection:isSection andReuseIdentifierArr:reuseIdentifierArr];
+    return [JDragonTableManager dataSource:source tabType:tabType tableView:self tabCurrentObj:currentObj isSection:isSection andReuseIdentifierArr:reuseIdentifierArr];
 }
 
 - (id)JDTab_DataSourceWithTabType:(JDTabHelpType)tabType
-                           withVC:(UIViewController*)VC
+                    tabCurrentObj:(UIViewController*)currentObj
                         isSection:(BOOL)isSection
                   reuseIdentifier:(NSString *)reuseIdentifier
 {
     return [JDragonTableManager
-            dataSource:nil tabType:tabType tableView:self tabVC:VC isSection:isSection andReuseIdentifier:reuseIdentifier];
+            dataSource:nil tabType:tabType tableView:self tabCurrentObj:currentObj isSection:isSection andReuseIdentifier:reuseIdentifier];
     
 }
 - (id)JDTab_DataSourceWithTabType:(JDTabHelpType)tabType
-                           withVC:(UIViewController*)VC
+                    tabCurrentObj:(UIViewController*)currentObj
                         isSection:(BOOL)isSection
                reuseIdentifierArr:(NSArray *)reuseIdentifierArr
 {
     
-    return [JDragonTableManager dataSource:nil tabType:tabType tableView:self tabVC:VC isSection:isSection andReuseIdentifierArr:reuseIdentifierArr];
+    return [JDragonTableManager dataSource:nil tabType:tabType tableView:self tabCurrentObj:currentObj isSection:isSection andReuseIdentifierArr:reuseIdentifierArr];
 }
 
 - (id)JDTab_DelegateWithReuseIdentifier:(NSObject *)reuseobj
                            headerHeight:(CGFloat)hHeight
                            footerHeight:(CGFloat)fHeight
-                             selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock
+                            selectBlock:(void(^)(NSIndexPath *indexPath))selectBlock
 
 {
     return [JDragonTableManager tabDelegateWithtableView:self andReuseIdentifier:reuseobj HeaderHeight:hHeight footerHeight:fHeight selectBlock:selectBlock];

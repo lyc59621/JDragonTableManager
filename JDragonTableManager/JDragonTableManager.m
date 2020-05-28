@@ -22,7 +22,7 @@
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) NSString *reuseIdentifier;
 @property(nonatomic,strong) NSArray  *reuseIdentArr;
-@property(nonatomic,strong) UIViewController  *currentVC;
+@property(nonatomic,strong) NSObject  *currentObj;
 @property(nonatomic,assign) BOOL  isSection;
 @property(nonatomic,strong) NSArray *data;
 
@@ -63,27 +63,27 @@
 #pragma mark-------------------UITableViewDelegate-----------------------------
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
-            return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView heightForHeaderInSection:section];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:heightForHeaderInSection:)]) {
+            return   [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView heightForHeaderInSection:section];
         }
     }
     return !self.headerHeight?FLT_MIN:self.headerHeight;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:heightForFooterInSection:)]) {
-            return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView heightForFooterInSection:section];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:heightForFooterInSection:)]) {
+            return   [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView heightForFooterInSection:section];
         }
     }
     return !self.footerHeight?FLT_MIN:self.footerHeight;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
-            return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView heightForRowAtIndexPath:indexPath];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]) {
+            return   [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView heightForRowAtIndexPath:indexPath];
         }
     }
     //如果是预估高度
@@ -112,30 +112,37 @@
 //    }];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didSelectRowAtIndexPath:indexPath];
+        }
+        return;
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     self.selectCellBlock(indexPath);
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
         }
     }
 }
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
         }
     }
 }
 - (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(nullable NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView didEndEditingRowAtIndexPath:indexPath];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndEditingRowAtIndexPath:indexPath];
         }
     }
 }
@@ -143,17 +150,28 @@
 
 
 #pragma mark-------------------TabDataSource----------------------------
-+ (instancetype)dataSource:(NSArray *)source tabType:(JDTabHelpType)tabType tableView:(UITableView *)tableView tabVC:(UIViewController*)tabVC isSection:(BOOL)isSection andReuseIdentifier:(NSString *)reuseIdentifier{
-    return [[[self class] alloc] initWithSource:source tabType:tabType tableView:tableView isSection:isSection tabVC:tabVC andReuseIdentifier:reuseIdentifier];
++ (instancetype)dataSource:(NSArray *)source
+                   tabType:(JDTabHelpType)tabType
+                 tableView:(UITableView *)tableView
+             tabCurrentObj:(UIViewController*)currentObj
+                 isSection:(BOOL)isSection
+        andReuseIdentifier:(NSString *)reuseIdentifier{
+    return [[[self class] alloc] initWithSource:source tabType:tabType tableView:tableView isSection:isSection tabCurrentObj:currentObj andReuseIdentifier:reuseIdentifier];
 }
-+ (instancetype)dataSource:(NSArray *)source tabType:(JDTabHelpType)tabType tableView:(UITableView *)tableView  tabVC:(UIViewController*)tabVC isSection:(BOOL)isSection andReuseIdentifierArr:(NSArray *)reuseIdentifierArr{
-    return [[[self class] alloc]initWithSource:source tabType:tabType  tableView:tableView isSection:isSection tabVC:tabVC andReuseIdentifierArr:reuseIdentifierArr];
++ (instancetype)dataSource:(NSArray *)source
+                   tabType:(JDTabHelpType)tabType
+                 tableView:(UITableView *)tableView
+             tabCurrentObj:(NSObject*)currentObj
+                 isSection:(BOOL)isSection
+     andReuseIdentifierArr:(NSArray *)reuseIdentifierArr{
+    
+    return [[[self class] alloc]initWithSource:source tabType:tabType  tableView:tableView isSection:isSection tabCurrentObj:currentObj andReuseIdentifierArr:reuseIdentifierArr];
 }
 - (instancetype)initWithSource:(NSArray *)source
                        tabType:(JDTabHelpType)tabType
                      tableView:(UITableView *)tableView
                      isSection:(BOOL)isSection
-                         tabVC:(UIViewController*)tabVC
+                 tabCurrentObj:(NSObject*)currentObj
             andReuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super init]) {
@@ -161,7 +179,7 @@
         _tableView = tableView;
         _reuseIdentifier = reuseIdentifier;
         _data = @[];
-        _currentVC = tabVC;
+        _currentObj = currentObj;
         _tabHelpType = tabType;
         
         
@@ -179,7 +197,7 @@
                       tabType:(JDTabHelpType)tabType
                     tableView:(UITableView *)tableView
                     isSection:(BOOL)isSection
-                        tabVC:(UIViewController*)tabVC
+                tabCurrentObj:(NSObject*)currentObj
         andReuseIdentifierArr:(NSArray *)reuseIdentifierArr
 {
     if (self = [super init]) {
@@ -187,7 +205,7 @@
         _tableView = tableView;
         _reuseIdentArr = reuseIdentifierArr;
         _data = @[];
-        _currentVC = tabVC;
+        _currentObj = currentObj;
         _tabHelpType = tabType;
         
         //        RAC(self, data) = [[source ignore:nil] doNext:^(NSArray *data) {
@@ -213,11 +231,11 @@
     self.selectCellBlock = selectBlock;
 }
 
--(void)setReuseIdentifieArrayInSectionTypeWithArray:(NSArray*)array
+-(void)setReuseIdentifierArrayInSectionTypeWithArray:(NSArray*)array
 {
     _reuseIdentArr = array;
 }
--(void)setReuseIdentifierOneTypeWithReuse:(NSString*)identifier
+-(void)setReuseIdentifierOneTypeWithReuseStr:(NSString*)identifier
 {
     _reuseIdentifier = identifier;
 }
@@ -234,18 +252,18 @@
 
 -(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:viewForFooterInSection:)]) {
-            return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView viewForFooterInSection:section];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:viewForFooterInSection:)]) {
+            return   [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView viewForFooterInSection:section];
         }
     }
     return  [UIView new];
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:viewForHeaderInSection:)]) {
-            return   [( UIViewController<UITableViewDelegate> *)self.currentVC  tableView:tableView viewForHeaderInSection:section];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:viewForHeaderInSection:)]) {
+            return   [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView viewForHeaderInSection:section];
         }
     }
     return [UIView new];
@@ -263,8 +281,8 @@
     }
     //    NSTimeInterval startLoadTime = [[NSDate date] timeIntervalSince1970];
       if ([cell conformsToProtocol:@protocol(JDTableManagerDelegate) ]) {
-          if ([cell respondsToSelector:@selector(PrepareToWithAppear:WithCurentVC:WithIndexPath:)]) {
-              [( UITableViewCell<JDTableManagerDelegate> *)cell  PrepareToWithAppear:data WithCurentVC:self.currentVC WithIndexPath:indexPath];
+          if ([cell respondsToSelector:@selector(PrepareToWithAppear:WithCurentObj:WithIndexPath:)]) {
+              [( UITableViewCell<JDTableManagerDelegate> *)cell  PrepareToWithAppear:data WithCurentObj:self.currentObj WithIndexPath:indexPath];
           }
       }
       //    NSTimeInterval endTime = [[NSDate date] timeIntervalSince1970];
@@ -291,6 +309,11 @@
 #pragma mark-------------------UITableViewDataSource----------------------------
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(numberOfSectionsInTableView:)]) {
+          return  [( UIViewController<UITableViewDataSource> *)self.currentObj numberOfSectionsInTableView:tableView];
+        }
+    }
     NSInteger  count = 1;
     if (_isSection) {
         count = self.data.count;
@@ -299,6 +322,11 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:numberOfRowsInSection:)]) {
+          return  [( UIViewController<UITableViewDataSource> *)self.currentObj  tableView:tableView numberOfRowsInSection:section];
+        }
+    }
     NSInteger  count = self.data.count;
     if (_isSection) {
         switch (self.tabHelpType) {
@@ -320,6 +348,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:cellForRowAtIndexPath:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView cellForRowAtIndexPath:indexPath ];
+        }
+    }
+    
     UITableViewCell *cell;
     if (_reuseIdentArr!=nil) {
         cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentArr[indexPath.section] forIndexPath:indexPath];
@@ -334,9 +369,9 @@
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:titleForHeaderInSection:)]) {
-            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView titleForHeaderInSection:section ];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:titleForHeaderInSection:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView titleForHeaderInSection:section ];
         }
     }
     return @"";
@@ -344,27 +379,27 @@
 - (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:titleForFooterInSection:)]) {
-            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView titleForFooterInSection:section ];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:titleForFooterInSection:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView titleForFooterInSection:section ];
         }
     }
     return @"";
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
-            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView canEditRowAtIndexPath:indexPath ];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView canEditRowAtIndexPath:indexPath ];
         }
     }
     return false;
 }
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
-            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView canMoveRowAtIndexPath:indexPath ];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView canMoveRowAtIndexPath:indexPath ];
         }
     }
     return false;
@@ -372,9 +407,9 @@
 
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
-            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  sectionIndexTitlesForTableView:tableView ];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  sectionIndexTitlesForTableView:tableView ];
         }
     }
     NSMutableArray  *strArray = [[NSMutableArray alloc]init];
@@ -385,27 +420,27 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
-            return  [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
+            return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
         }
     }
     return 0;
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+            [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
         }
     }
 }
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
     
-    if ([self.currentVC conformsToProtocol:@protocol(UITableViewDataSource) ]) {
-        if ([self.currentVC respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
-            [( UIViewController<UITableViewDataSource> *)self.currentVC  tableView:tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]) {
+            [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
         }
     }
 }
@@ -422,91 +457,91 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(scrollViewDidScroll:)]) {
-            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidScroll:scrollView];
+    if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(scrollViewDidScroll:)]) {
+            [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewDidScroll:scrollView];
         }
     }
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
-            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewWillBeginDragging:scrollView];
+    if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+            [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewWillBeginDragging:scrollView];
         }
     }
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
-            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
+            [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
         }
     }
 }
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
-            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewWillBeginDecelerating:scrollView];
+    if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
+            [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewWillBeginDecelerating:scrollView];
         }
     }
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
-            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndDecelerating:scrollView];
+    if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
+            [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewDidEndDecelerating:scrollView];
         }
     }
 }
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
-   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
-            [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndScrollingAnimation:scrollView];
+   if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
+            [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewDidEndScrollingAnimation:scrollView];
         }
     }
 }
 - (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-        if ([self.currentVC respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
-           return [( UIViewController<UIScrollViewDelegate> *)self.currentVC  viewForZoomingInScrollView:scrollView];
+   if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
+           return [( NSObject<UIScrollViewDelegate> *)self.currentObj  viewForZoomingInScrollView:scrollView];
         }
     }
     return nil;
 }
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view
 {
-   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-      if ([self.currentVC respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
-          [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewWillBeginZooming:scrollView withView:view];
+   if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+      if ([self.currentObj respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
+          [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewWillBeginZooming:scrollView withView:view];
         }
     }
 }
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale
 {
-   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-       if ([self.currentVC respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
-           [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidEndZooming:scrollView withView:view atScale:scale];
+   if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+       if ([self.currentObj respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
+           [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewDidEndZooming:scrollView withView:view atScale:scale];
         }
     }
 }
 - (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
 {
-   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-       if ([self.currentVC respondsToSelector:@selector(scrollViewShouldScrollToTop:)]) {
-         return [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewShouldScrollToTop:scrollView];
+   if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+       if ([self.currentObj respondsToSelector:@selector(scrollViewShouldScrollToTop:)]) {
+         return [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewShouldScrollToTop:scrollView];
         }
     }
     return true;
 }
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
 {
-   if ([self.currentVC conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
-       if ([self.currentVC respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
-          [( UIViewController<UIScrollViewDelegate> *)self.currentVC  scrollViewDidScrollToTop:scrollView];
+   if ([self.currentObj conformsToProtocol:@protocol(UIScrollViewDelegate) ]) {
+       if ([self.currentObj respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
+          [( NSObject<UIScrollViewDelegate> *)self.currentObj  scrollViewDidScrollToTop:scrollView];
         }
     }
 }

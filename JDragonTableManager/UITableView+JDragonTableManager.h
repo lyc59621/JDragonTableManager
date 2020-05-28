@@ -19,7 +19,7 @@
  *  @return TableViewDataSource
  */
 - (id)JDTab_DataSourceWithTabType:(JDTabHelpType)tabType
-                           withVC:(UIViewController*)VC
+                    tabCurrentObj:(NSObject*)currentObj
                         isSection:(BOOL)isSection
                   reuseIdentifier:(NSString *)reuseIdentifier;
 /**
@@ -28,7 +28,7 @@
  *  @return TableViewDataSource
  */
 - (id)JDTab_DataSourceWithTabType:(JDTabHelpType)tabType
-                           withVC:(UIViewController*)VC
+                    tabCurrentObj:(NSObject*)currentObj
                         isSection:(BOOL)isSection
                reuseIdentifierArr:(NSArray *)reuseIdentifierArr;
 /**
@@ -38,7 +38,7 @@
  */
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
                      withTabType:(JDTabHelpType)tabType
-                          withVC:(UIViewController*)VC
+                   tabCurrentObj:(NSObject*)currentObj
                        isSection:(BOOL)isSection
                  reuseIdentifier:(NSString *)reuseIdentifier;
 /**
@@ -48,7 +48,7 @@
  */
 - (id)JDTab_DataSourceWithSource:(NSArray *)source
                      withTabType:(JDTabHelpType)tabType
-                          withVC:(UIViewController*)VC
+                   tabCurrentObj:(NSObject*)currentObj
                        isSection:(BOOL)isSection
               reuseIdentifierArr:(NSArray *)reuseIdentifierArr;
 
@@ -56,7 +56,7 @@
 #pragma mark----------------------------TableDelegate--------------------------------
 /**
  *  获取tabDelagate
- *
+ *  reuseobj  可以为数组形式 也可以为String
  *  @return TableViewDelagate
  */
 - (id)JDTab_DelegateWithReuseIdentifier:(NSObject *)reuseobj

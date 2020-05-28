@@ -40,7 +40,7 @@
         NSLog(@"选中");
     }];
     // 需要实现JDTableManagerDelegate 代理在cell里面
-    self.tabDataSource = [self.aTableView JDTab_DataSourceWithSource:@[@"111",@"222"] withTabType:NumberOfRowsInSectionCount withVC:self isSection:true reuseIdentifier:@"aTableViewCell"];
+    self.tabDataSource = [self.aTableView JDTab_DataSourceWithSource:@[@"111",@"222"] withTabType:NumberOfRowsInSectionCount tabCurrentObj:self isSection:true reuseIdentifier:@"aTableViewCell"];
     /*
     //第二种方式，可以不带原数据
     self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount withVC:self isSection:true reuseIdentifier:@"aTableViewCell"];
@@ -64,15 +64,15 @@
     //单cell 情况
     switch (sender.selectedSegmentIndex) {
         case 0:
-            self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount withVC:self isSection:true reuseIdentifier:@"aTableViewCell"];
+            self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount tabCurrentObj:self isSection:true reuseIdentifier:@"aTableViewCell"];
             [self.tabDataSource updateReloadData:@[@"111",@"222"]];
             break;
         case 1:
-            self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionNum withVC:self isSection:true reuseIdentifier:@"aTableViewCell"];
+            self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionNum tabCurrentObj:self isSection:true reuseIdentifier:@"aTableViewCell"];
             [self.tabDataSource updateReloadData:@[@[@"111",@"222"],@[@"333",@"444"]]];
             break;
         case 2:
-            self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionOne withVC:self isSection:true reuseIdentifier:@"aTableViewCell"];
+            self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionOne tabCurrentObj:self isSection:true reuseIdentifier:@"aTableViewCell"];
             [self.tabDataSource updateReloadData:@[@"111",@"222",@"333"]];
             break;
         default:
@@ -86,15 +86,15 @@
          */
         switch (sender.selectedSegmentIndex) {
             case 0:
-                self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount withVC:self isSection:true reuseIdentifierArr:@[@"aTableViewCell",@"bTableViewCell"]];
+                self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount tabCurrentObj:self isSection:true reuseIdentifierArr:@[@"aTableViewCell",@"bTableViewCell"]];
                 [self.tabDataSource updateReloadData:@[@"111",@"222"]];
                 break;
             case 1:
-                self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionNum withVC:self isSection:true reuseIdentifierArr:@[@"aTableViewCell",@"bTableViewCell"]];
+                self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionNum tabCurrentObj:self isSection:true reuseIdentifierArr:@[@"aTableViewCell",@"bTableViewCell"]];
                 [self.tabDataSource updateReloadData:@[@[@"333",@"444"],@[@"555",@"666"]]];
                 break;
             case 2:
-                self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionOne withVC:self isSection:true reuseIdentifierArr:@[@"aTableViewCell",@"bTableViewCell"]];
+                self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionOne tabCurrentObj:self isSection:true reuseIdentifierArr:@[@"aTableViewCell",@"bTableViewCell"]];
                 [self.tabDataSource updateReloadData:@[@"777",@"888"]];
                 break;
             default:

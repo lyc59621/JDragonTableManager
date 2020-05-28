@@ -32,9 +32,9 @@ typedef void(^JDTabSelectCellBlock)(NSIndexPath *indexPath);
 
 /// cell 去实现
 /// @param data 数据
-/// @param curentVC 当前VC
+/// @param curentObj 当前VC 或者持有者
 /// @param indexPath indexPath
-- (void)PrepareToWithAppear:(NSObject *)data  WithCurentVC:(UIViewController*)curentVC  WithIndexPath:(NSIndexPath*)indexPath;
+- (void)PrepareToWithAppear:(NSObject *)data  WithCurentObj:(NSObject*)curentObj  WithIndexPath:(NSIndexPath*)indexPath;
 
 @end
 
@@ -68,14 +68,14 @@ typedef enum JDTabHelpType:NSUInteger
 /// @param source 数据源
 /// @param tabType Tab 展示类型
 /// @param tableView tabview
-/// @param tabVC tabVC
+/// @param currentObj tabVC 或者代理实现对象
 /// @param isSection 是否分区
 /// @param reuseIdentifier 唯一标识符
 - (instancetype)initWithSource:(NSArray *)source
                        tabType:(JDTabHelpType)tabType
                      tableView:(UITableView *)tableView
                      isSection:(BOOL)isSection
-                         tabVC:(UIViewController*)tabVC
+                 tabCurrentObj:(NSObject*)currentObj
             andReuseIdentifier:(NSString *)reuseIdentifier;
 
 
@@ -85,14 +85,14 @@ typedef enum JDTabHelpType:NSUInteger
 /// @param source 数据源
 /// @param tabType Tab 展示类型
 /// @param tableView tabview
-/// @param tabVC tabVC
+/// @param currentObj tabVC
 /// @param isSection 是否分区
 /// @param reuseIdentifierArr 唯一标识符数组
 -(instancetype)initWithSource:(NSArray *)source
                       tabType:(JDTabHelpType)tabType
                     tableView:(UITableView *)tableView
                     isSection:(BOOL)isSection
-                        tabVC:(UIViewController*)tabVC
+                tabCurrentObj:(NSObject*)currentObj
         andReuseIdentifierArr:(NSArray *)reuseIdentifierArr;
 
 
@@ -102,13 +102,13 @@ typedef enum JDTabHelpType:NSUInteger
 /// @param source 数据源
 /// @param tabType Tab 展示类型
 /// @param tableView tabview
-/// @param tabVC tabVC
+/// @param currentObj tabVC
 /// @param isSection 是否分区
 /// @param reuseIdentifier 唯一标识符
 + (instancetype)dataSource:(NSArray *)source
                    tabType:(JDTabHelpType)tabType
                  tableView:(UITableView *)tableView
-                     tabVC:(UIViewController*)tabVC
+             tabCurrentObj:(NSObject*)currentObj
                  isSection:(BOOL)isSection
         andReuseIdentifier:(NSString *)reuseIdentifier;
 
@@ -118,13 +118,13 @@ typedef enum JDTabHelpType:NSUInteger
 /// @param source 数据源
 /// @param tabType Tab 展示类型
 /// @param tableView tabview
-/// @param tabVC tabVC
+/// @param currentObj tabVC
 /// @param isSection 是否分区
 /// @param reuseIdentifierArr 唯一标识符数组
 + (instancetype)dataSource:(NSArray *)source
                    tabType:(JDTabHelpType)tabType
                  tableView:(UITableView *)tableView
-                     tabVC:(UIViewController*)tabVC
+             tabCurrentObj:(NSObject*)currentObj
                  isSection:(BOOL)isSection
      andReuseIdentifierArr:(NSArray *)reuseIdentifierArr;
 
@@ -140,7 +140,7 @@ typedef enum JDTabHelpType:NSUInteger
 
 /// 重新设置唯一标识符
 /// @param array 标识符数组
--(void)setReuseIdentifieArrayInSectionTypeWithArray:(NSArray*)array;
+-(void)setReuseIdentifierArrayInSectionTypeWithArray:(NSArray*)array;
 
 /// 重新设置唯一标识符
 /// @param identifier 唯一标识符

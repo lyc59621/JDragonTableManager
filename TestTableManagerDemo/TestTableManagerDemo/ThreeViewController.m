@@ -43,7 +43,7 @@
 
 -(void)oneType
 {
-    self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount withVC:self isSection:false reuseIdentifier:@"bTableViewCell"];
+    self.tabDataSource = [self.aTableView JDTab_DataSourceWithTabType:NumberOfRowsInSectionCount tabCurrentObj:self isSection:false reuseIdentifier:@"bTableViewCell"];
 
        [self.tabDataSource setCellHeaderHeight:40 footerHeight:40 selectBlock:^(NSIndexPath *indexPath) {
            NSLog(@"点击我了");
@@ -94,8 +94,8 @@
     cell = [tableView dequeueReusableCellWithIdentifier:@"bTableViewCell" forIndexPath:indexPath];
     
     if ([cell conformsToProtocol:@protocol(JDTableManagerDelegate) ]) {
-        if ([cell respondsToSelector:@selector(PrepareToWithAppear:WithCurentVC:WithIndexPath:)]) {
-            [( UITableViewCell<JDTableManagerDelegate> *)cell  PrepareToWithAppear:self.datas[indexPath.row] WithCurentVC:self WithIndexPath:indexPath];
+        if ([cell respondsToSelector:@selector(PrepareToWithAppear:WithCurentObj:WithIndexPath:)]) {
+            [( UITableViewCell<JDTableManagerDelegate> *)cell  PrepareToWithAppear:self.datas[indexPath.row] WithCurentObj: self WithIndexPath:indexPath];
         }
     }
     return cell;
