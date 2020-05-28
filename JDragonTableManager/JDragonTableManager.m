@@ -130,6 +130,46 @@
         }
     }
 }
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+   if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:willDisplayHeaderView:forSection:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayHeaderView:view forSection:section];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section
+{
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+           if ([self.currentObj respondsToSelector:@selector(tableView:willDisplayFooterView:forSection:)]) {
+               [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayFooterView:view forSection:section];
+           }
+       }
+}
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:didEndDisplayingCell:forRowAtIndexPath:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:didEndDisplayingHeaderView:forSection:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingHeaderView:view forSection:section];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section
+{
+  if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
+        if ([self.currentObj respondsToSelector:@selector(tableView:didEndDisplayingFooterView:forSection:)]) {
+            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingFooterView:view forSection:section];
+        }
+    }
+}
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
@@ -146,8 +186,6 @@
         }
     }
 }
-
-
 
 #pragma mark-------------------TabDataSource----------------------------
 + (instancetype)dataSource:(NSArray *)source
