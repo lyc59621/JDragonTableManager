@@ -115,18 +115,17 @@
     
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didSelectRowAtIndexPath:indexPath];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView didSelectRowAtIndexPath:indexPath];
         }
         return;
     }
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     self.selectCellBlock(indexPath);
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
         }
     }
 }
@@ -134,7 +133,7 @@
 {
    if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:willDisplayHeaderView:forSection:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayHeaderView:view forSection:section];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayHeaderView:view forSection:section];
         }
     }
 }
@@ -142,7 +141,7 @@
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
            if ([self.currentObj respondsToSelector:@selector(tableView:willDisplayFooterView:forSection:)]) {
-               [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayFooterView:view forSection:section];
+               [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView willDisplayFooterView:view forSection:section];
            }
        }
 }
@@ -150,7 +149,7 @@
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:didEndDisplayingCell:forRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
         }
     }
 }
@@ -158,7 +157,7 @@
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:didEndDisplayingHeaderView:forSection:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingHeaderView:view forSection:section];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingHeaderView:view forSection:section];
         }
     }
 }
@@ -166,7 +165,7 @@
 {
   if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:didEndDisplayingFooterView:forSection:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingFooterView:view forSection:section];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndDisplayingFooterView:view forSection:section];
         }
     }
 }
@@ -174,7 +173,7 @@
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
         }
     }
 }
@@ -182,7 +181,7 @@
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
-            [( UIViewController<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndEditingRowAtIndexPath:indexPath];
+            [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView didEndEditingRowAtIndexPath:indexPath];
         }
     }
 }
@@ -349,7 +348,7 @@
 {
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
         if ([self.currentObj respondsToSelector:@selector(numberOfSectionsInTableView:)]) {
-          return  [( UIViewController<UITableViewDataSource> *)self.currentObj numberOfSectionsInTableView:tableView];
+          return  [( NSObject<UITableViewDataSource> *)self.currentObj numberOfSectionsInTableView:tableView];
         }
     }
     NSInteger  count = 1;
@@ -362,7 +361,7 @@
     
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDataSource) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:numberOfRowsInSection:)]) {
-          return  [( UIViewController<UITableViewDataSource> *)self.currentObj  tableView:tableView numberOfRowsInSection:section];
+          return  [( NSObject<UITableViewDataSource> *)self.currentObj  tableView:tableView numberOfRowsInSection:section];
         }
     }
     NSInteger  count = self.data.count;
