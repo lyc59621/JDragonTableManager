@@ -19,10 +19,10 @@
 
 
 #pragma mark-------------------TabDataSource----------------------------
-@property(nonatomic,strong) UITableView *tableView;
-@property(nonatomic,strong) NSString *reuseIdentifier;
+@property(nonatomic,weak) UITableView *tableView;
+@property(nonatomic,copy) NSString *reuseIdentifier;
 @property(nonatomic,strong) NSArray  *reuseIdentArr;
-@property(nonatomic,strong) NSObject  *currentObj;
+@property(nonatomic,weak) NSObject  *currentObj;
 @property(nonatomic,assign) BOOL  isSection;
 @property(nonatomic,strong) NSArray *data;
 
