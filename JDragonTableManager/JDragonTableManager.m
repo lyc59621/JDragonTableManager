@@ -116,8 +116,8 @@
     if ([self.currentObj conformsToProtocol:@protocol(UITableViewDelegate) ]) {
         if ([self.currentObj respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
             [( NSObject<UITableViewDelegate> *)self.currentObj  tableView:tableView didSelectRowAtIndexPath:indexPath];
+            return;
         }
-        return;
     }
     self.selectCellBlock(indexPath);
 }
@@ -216,7 +216,6 @@
         _tableView = tableView;
         _reuseIdentifier = reuseIdentifier;
         _data = @[];
-        _currentObj = currentObj;
         _tabHelpType = tabType;
         
         
@@ -226,7 +225,8 @@
         //            });
         //        }];
         self.data = source;
-        _tableView.dataSource = self;
+        self.currentObj = currentObj;
+        self.tableView.dataSource = self;
     }
     return self;
 }
@@ -242,7 +242,6 @@
         _tableView = tableView;
         _reuseIdentArr = reuseIdentifierArr;
         _data = @[];
-        _currentObj = currentObj;
         _tabHelpType = tabType;
         
         //        RAC(self, data) = [[source ignore:nil] doNext:^(NSArray *data) {
@@ -252,7 +251,8 @@
         //            });
         //        }];
         self.data = source;
-        _tableView.dataSource = self;
+        self.currentObj = currentObj;
+        self.tableView.dataSource = self;
     }
     return self;
 }
@@ -584,5 +584,7 @@
 }
 
 @end
+
+
 
 
